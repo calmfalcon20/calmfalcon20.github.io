@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>久久艹久久日-长期更新站点观察与条目索引</title>
+<meta name="description" content="久久艹久久日是一个记录长期更新站点条目与版本变化的观察索引，整理了更新节奏、条目分组、筛选方法与读者反馈，并按周汇总可核对的更新记录与访问体验说明。">
+<meta name="keywords" content="久久艹久久日">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23163b3a'/%3E%3Ccircle cx='24' cy='26' r='9' fill='%23e8b44a'/%3E%3Ccircle cx='42' cy='38' r='9' fill='%23f4ede0'/%3E%3Cpath d='M12 50h40' stroke='%23e8b44a' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b2321;
+  --ink-soft:#4a5754;
+  --muted:#6e7b77;
+  --paper:#f7f4ec;
+  --card:#fffdf8;
+  --line:#ddd6c6;
+  --brand:#163b3a;
+  --brand-2:#1f5a55;
+  --accent:#c8892a;
+  --accent-soft:#f2e3c4;
+  --warn:#8c3b25;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(27,35,33,.06),0 8px 24px rgba(27,35,33,.07);
+  --shadow-sm:0 1px 3px rgba(27,35,33,.08);
+  --gap:20px;
+  --ann-h:44px;
+  --head-h:64px;
+  --maxw:1180px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.25em}
+section[id]{scroll-margin-top:calc(var(--ann-h) + var(--head-h) + 12px)}
+
+/* 吸顶公告条 */
+.announce{
+  position:sticky;top:0;z-index:60;
+  background:var(--brand);
+  color:#f4ede0;
+  font-size:13.5px;
+  height:var(--ann-h);
+  display:flex;align-items:center;
+}
+.announce .wrap{
+  max-width:var(--maxw);margin:0 auto;padding:0 20px;width:100%;
+  display:flex;gap:12px;align-items:center;flex-wrap:nowrap;overflow:hidden;
+}
+.announce .tag{
+  flex:0 0 auto;background:var(--accent);color:#241a06;font-weight:700;
+  border-radius:999px;padding:1px 10px;font-size:12px;letter-spacing:.5px;
+}
+.announce .txt{
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1 1 auto;
+}
+.announce a{color:#ffe3ab;text-decoration:underline;text-underline-offset:3px;flex:0 0 auto;font-size:13px}
+
+/* 吸顶页头 */
+.site-head{
+  position:sticky;top:var(--ann-h);z-index:55;
+  background:rgba(247,244,236,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{
+  max-width:var(--maxw);margin:0 auto;padding:0 20px;
+  height:var(--head-h);
+  display:flex;align-items:center;gap:18px;
+}
+.brand{
+  display:flex;align-items:center;gap:10px;flex:0 0 auto;color:var(--ink);
+}
+.brand:hover{text-decoration:none}
+.brand-logo{width:36px;height:36px;flex:0 0 auto}
+.brand-name{font-weight:800;font-size:18px;letter-spacing:.5px;color:var(--brand)}
+.nav-main{
+  display:flex;gap:4px;flex:1 1 auto;overflow:hidden;
+}
+.nav-main a{
+  padding:8px 11px;border-radius:999px;font-size:14.5px;color:var(--ink-soft);
+  white-space:nowrap;
+}
+.nav-main a:hover{background:var(--accent-soft);color:var(--brand);text-decoration:none}
+.nav-main a.active{background:var(--brand);color:#f4ede0}
+.head-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.search-box{
+  display:flex;align-items:center;gap:6px;
+  border:1px solid var(--line);background:var(--card);border-radius:999px;
+  padding:4px 6px 4px 12px;
+}
+.search-box input{
+  border:0;background:transparent;font:inherit;font-size:14px;width:130px;color:var(--ink);
+  padding:4px 0;
+}
+.search-box input:focus{outline:none}
+.search-box button{
+  border:0;background:var(--brand);color:#f4ede0;border-radius:999px;
+  padding:5px 12px;font:inherit;font-size:13px;cursor:pointer;
+}
+.search-box button:hover{background:var(--brand-2)}
+.menu-btn{
+  display:none;border:1px solid var(--line);background:var(--card);border-radius:10px;
+  padding:7px 12px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink);
+}
+.search-result{
+  max-width:var(--maxw);margin:0 auto;padding:0 20px;
+}
+.search-result .sr-inner{
+  display:none;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:10px 14px;font-size:14px;color:var(--ink-soft);margin-bottom:8px;
+}
+.search-result .sr-inner.show{display:block}
+.search-result .sr-inner em{font-style:normal;color:var(--warn);font-weight:700}
+
+/* 布局容器 */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 300px;
+  gap:28px;
+  padding:28px 0 8px;
+  align-items:start;
+}
+.layout .side{position:sticky;top:calc(var(--ann-h) + var(--head-h) + 16px)}
+.layout .side .side-card{margin-bottom:16px}
+
+/* 首屏 */
+.hero{
+  background:
+    radial-gradient(1200px 380px at 82% -10%, rgba(200,137,42,.20), transparent 60%),
+    linear-gradient(160deg,#12302f 0%, #1b4a46 58%, #245a53 100%);
+  color:#f4ede0;
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.hero .wrap{padding-top:44px;padding-bottom:44px}
+.hero-grid{
+  display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr);
+  gap:36px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:1px;color:#ffe3ab;margin-bottom:12px;
+  border:1px solid rgba(255,227,171,.4);border-radius:999px;padding:3px 12px;
+}
+.hero h1{
+  font-size:clamp(30px,4.4vw,46px);
+  margin:0 0 14px;letter-spacing:1px;color:#fff;
+  text-shadow:0 2px 0 rgba(0,0,0,.12);
+}
+.hero .lead{
+  font-size:16.5px;color:#d8e4e0;max-width:56ch;margin-bottom:22px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.btn{
+  display:inline-block;border-radius:999px;padding:10px 20px;font-size:14.5px;font-weight:600;
+  transition:transform .15s ease, background .15s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#241a06}
+.btn-primary:hover{background:#d99a3d}
+.btn-ghost{border:1px solid rgba(255,227,171,.55);color:#ffe3ab}
+.btn-ghost:hover{background:rgba(255,227,171,.12)}
+.hero-stats{
+  display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid rgba(255,227,171,.25);padding-top:18px;
+}
+.hero-stats div{min-width:96px}
+.hero-stats b{display:block;font-size:24px;color:#ffe3ab;line-height:1.2}
+.hero-stats span{font-size:12.5px;color:#b9ccc7;letter-spacing:.5px}
+.hero-art{
+  position:relative;justify-self:center;width:100%;max-width:360px;aspect-ratio:1/1;
+}
+.hero-art svg{width:100%;height:100%;display:block}
+
+/* 通用板块 */
+.panel{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px;margin-bottom:24px;box-shadow:var(--shadow-sm);
+}
+.panel > h2{
+  font-size:21px;margin:0 0 4px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.panel > h2::before{
+  content:"";width:6px;height:20px;border-radius:3px;background:var(--accent);flex:0 0 auto;
+}
+.panel .sub{font-size:13px;color:var(--muted);margin:0 0 16px}
+.panel h3{font-size:16.5px;margin:18px 0 8px}
+.panel h3:first-child{margin-top:4px}
+
+/* 频道索引 */
+.channel-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;
+}
+.channel-grid a{
+  display:flex;flex-direction:column;gap:2px;
+  border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:10px 12px;background:#fbf8f1;color:var(--ink);font-size:14.5px;font-weight:600;
+  transition:transform .15s ease,border-color .15s ease;
+}
+.channel-grid a:hover{transform:translateY(-2px);border-color:var(--accent);text-decoration:none}
+.channel-grid a small{font-weight:400;color:var(--muted);font-size:12px}
+
+/* 卡片网格 */
+.card-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;
+}
+.card{
+  background:#fbf8f1;border:1px solid var(--line);border-radius:var(--radius-sm);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .16s ease,box-shadow .16s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card .thumb{width:100%;height:132px;object-fit:cover;background:#e8e1d1}
+.card .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .body h3{font-size:15.5px;margin:0}
+.card .body p{font-size:13.5px;color:var(--ink-soft);margin:0}
+.card .meta{font-size:12px;color:var(--muted);margin-top:auto;padding-top:6px;display:flex;gap:10px;flex-wrap:wrap}
+.pill{
+  display:inline-block;font-size:12px;padding:1px 9px;border-radius:999px;
+  background:var(--accent-soft);color:#6b4a12;font-weight:600;
+}
+
+/* 紧凑列表 */
+.list-compact{list-style:none;padding:0;margin:0}
+.list-compact li{
+  display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:12px;align-items:baseline;
+  padding:9px 0;border-bottom:1px dashed var(--line);font-size:14.5px;
+}
+.list-compact li:last-child{border-bottom:0}
+.list-compact time{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.list-compact .tit{color:var(--ink)}
+.list-compact .tit:hover{color:var(--brand-2)}
+.list-compact .src{font-size:12px;color:var(--muted);white-space:nowrap}
+
+/* 深度解析 */
+.deepthink{
+  border-left:4px solid var(--brand);background:#fbf8f1;
+  border-radius:0 var(--radius) var(--radius) 0;
+}
+.deepthink .quote{
+  border-left:3px solid var(--accent);padding:6px 0 6px 14px;margin:14px 0;
+  color:var(--ink-soft);font-size:15px;
+}
+.fact-box{
+  border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;margin:16px 0;
+}
+.fact-box table{width:100%;border-collapse:collapse;font-size:13.5px}
+.fact-box th,.fact-box td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line)}
+.fact-box th{background:#efe9db;font-weight:700;white-space:nowrap}
+.fact-box tr:last-child td{border-bottom:0}
+.tag-status{font-size:12px;padding:1px 8px;border-radius:999px;font-weight:700;white-space:nowrap}
+.st-fact{background:#d9ead9;color:#245a2a}
+.st-resp{background:#f7e6c6;color:#7a5310}
+.st-relay{background:#dbe6f2;color:#24486b}
+.st-guess{background:#f0dbd6;color:#7c2e1c}
+
+/* 步骤 */
+.steps{list-style:none;padding:0;margin:0;counter-reset:step}
+.steps li{
+  position:relative;padding:2px 0 16px 46px;counter-increment:step;border-left:2px solid var(--line);
+  margin-left:14px;
+}
+.steps li:last-child{border-left-color:transparent;padding-bottom:0}
+.steps li::before{
+  content:counter(step);position:absolute;left:-15px;top:0;
+  width:28px;height:28px;border-radius:50%;background:var(--brand);color:#f4ede0;
+  display:flex;align-items:center;justify-content:center;font-size:13.5px;font-weight:700;
+}
+.steps h3{font-size:15.5px;margin:2px 0 4px}
+.steps p{font-size:14px;color:var(--ink-soft);margin:0}
+
+/* 对照面板 */
+.compare{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);
+  border-radius:var(--radius-sm);overflow:hidden;margin:8px 0 4px;
+}
+.compare > div{padding:14px 16px;font-size:14px}
+.compare .col-a{background:#f2f6f2;border-right:1px solid var(--line)}
+.compare .col-b{background:#faf3e6}
+.compare h3{font-size:15px;margin:0 0 8px}
+.compare ul{margin:0;padding-left:1.1em}
+.compare li{margin-bottom:5px}
+
+/* 标签索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tag-index a{
+  display:inline-block;font-size:13.5px;padding:5px 12px;border-radius:999px;
+  border:1px solid var(--line);color:var(--ink-soft);background:#fbf8f1;
+}
+.tag-index a:hover{border-color:var(--accent);color:var(--brand);text-decoration:none;background:var(--accent-soft)}
+
+/* FAQ */
+.faq details{
+  border:1px solid var(--line);border-radius:var(--radius-sm);background:#fbf8f1;
+  padding:0 16px;margin-bottom:10px;
+}
+.faq details[open]{background:#fffaf0;border-color:var(--accent)}
+.faq summary{
+  cursor:pointer;padding:12px 0;font-weight:700;font-size:15px;list-style:none;
+  display:flex;justify-content:space-between;gap:10px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:18px;color:var(--accent);font-weight:700}
+.faq details[open] summary::after{content:"−"}
+.faq .ans{padding:0 0 14px;font-size:14px;color:var(--ink-soft)}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.comment{
+  background:#fbf8f1;border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:12px 14px;font-size:14px;
+}
+.comment .who{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);margin-bottom:6px}
+.comment .avatar{
+  width:24px;height:24px;border-radius:50%;background:var(--brand);color:#f4ede0;
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex:0 0 auto;
+}
+.comment .stars{color:var(--accent);letter-spacing:1px;font-size:12px}
+.comment p{margin:0;color:var(--ink-soft)}
+.comment .ref{font-size:12.5px;color:var(--brand-2);margin-top:6px;display:block}
+
+/* 引语 */
+.quote-card{
+  background:linear-gradient(150deg,#163b3a,#245a53);color:#f4ede0;
+  border-radius:var(--radius);padding:20px 22px;margin:8px 0 0;
+  position:relative;
+}
+.quote-card blockquote{margin:0;font-size:15.5px;line-height:1.8}
+.quote-card cite{display:block;margin-top:10px;font-size:13px;color:#ffe3ab;font-style:normal}
+
+/* 时间线 */
+.timeline{list-style:none;margin:0;padding:0 0 0 8px}
+.timeline li{position:relative;padding:0 0 16px 22px;border-left:2px solid var(--line)}
+.timeline li:last-child{border-left-color:transparent;padding-bottom:0}
+.timeline li::before{
+  content:"";position:absolute;left:-6px;top:6px;width:10px;height:10px;border-radius:50%;
+  background:var(--accent);border:2px solid var(--card);
+}
+.timeline b{display:block;font-size:14.5px}
+.timeline span{font-size:13px;color:var(--muted);display:block}
+.timeline p{font-size:13.5px;color:var(--ink-soft);margin:4px 0 0}
+
+/* 侧栏 */
+.side-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px;box-shadow:var(--shadow-sm);
+}
+.side-card h2{font-size:16px;margin:0 0 10px}
+.side-card h2::before{display:none}
+.side-card .sub{margin-bottom:10px}
+.side-nav{list-style:none;margin:0;padding:0;font-size:14px}
+.side-nav a{
+  display:block;padding:6px 10px;border-radius:8px;color:var(--ink-soft);border-left:3px solid transparent;
+}
+.side-nav a:hover{background:var(--accent-soft);text-decoration:none;color:var(--brand)}
+.side-nav a.active{background:var(--accent-soft);color:var(--brand);font-weight:700;border-left-color:var(--accent)}
+.rank-list{list-style:none;margin:0;padding:0;counter-reset:rank}
+.rank-list li{
+  counter-increment:rank;display:flex;gap:10px;align-items:baseline;
+  padding:7px 0;border-bottom:1px dashed var(--line);font-size:14px;
+}
+.rank-list li:last-child{border-bottom:0}
+.rank-list li::before{
+  content:counter(rank);flex:0 0 20px;height:20px;border-radius:6px;background:#efe9db;
+  color:var(--brand);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.rank-list li:nth-child(-n+3)::before{background:var(--accent);color:#241a06}
+.rank-list a{color:var(--ink)}
+.rank-list small{display:block;color:var(--muted);font-size:12px}
+
+/* 页脚 */
+.site-foot{
+  background:#122b2a;color:#c9d8d4;margin-top:20px;border-top:4px solid var(--accent);
+}
+.foot-inner{max-width:var(--maxw);margin:0 auto;padding:36px 20px 18px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+.site-foot h3{font-size:14px;color:#ffe3ab;margin:0 0 10px;letter-spacing:.5px}
+.site-foot .brand-name{color:#fff}
+.site-foot p{font-size:13.5px;color:#a9bfba;margin:0 0 8px}
+.foot-links{list-style:none;margin:0;padding:0;font-size:13.5px}
+.foot-links li{margin-bottom:6px}
+.foot-links a{color:#c9d8d4}
+.foot-links a:hover{color:#ffe3ab}
+.foot-bottom{
+  border-top:1px solid rgba(201,216,212,.18);margin-top:24px;padding-top:14px;
+  font-size:12.5px;color:#8fa6a1;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.to-top{
+  position:fixed;right:18px;bottom:24px;z-index:70;
+  width:44px;height:44px;border-radius:50%;border:0;background:var(--brand);color:#ffe3ab;
+  font-size:18px;cursor:pointer;box-shadow:var(--shadow);
+  opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s ease,transform .2s ease;
+}
+.to-top.show{opacity:1;pointer-events:auto;transform:none}
+.to-top:hover{background:var(--brand-2)}
+
+/* 响应式 */
+@media (max-width:960px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .layout .side{position:static;order:2;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .layout .side .side-card{margin-bottom:0}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{max-width:280px;order:-1}
+  .nav-main{display:none}
+  .nav-main.open{display:flex;flex-wrap:wrap;position:absolute;top:var(--head-h);left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 16px;overflow:visible}
+  .head-inner{position:relative;flex-wrap:nowrap}
+  .menu-btn{display:inline-block}
+  .search-box input{width:110px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .comments{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .layout .side{grid-template-columns:1fr}
+  .hero .wrap{padding-top:30px;padding-bottom:30px}
+  .hero-stats{gap:18px}
+  .panel{padding:18px 16px}
+  .head-tools .search-box{display:none}
+  .list-compact li{grid-template-columns:56px minmax(0,1fr);}
+  .list-compact .src{display:none}
+  .compare{grid-template-columns:1fr}
+  .compare .col-a{border-right:0;border-bottom:1px solid var(--line)}
+  .foot-grid{grid-template-columns:1fr}
+  .to-top{right:12px;bottom:16px}
+  .channel-grid{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce" role="region" aria-label="站点更新公告">
+  <div class="wrap">
+    <span class="tag">更新</span>
+    <span class="txt">久久艹久久日 · 11 月 6 日批次已登记 14 条版本变更，含条目 OO-217 分组调整与 OO-301 记录补录</span>
+    <a href="/#updates">看更新记录</a>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="/#top" aria-label="回到首页">
+      <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#163b3a"/>
+        <circle cx="24" cy="26" r="9" fill="#e8b44a"/>
+        <circle cx="42" cy="38" r="9" fill="#f4ede0"/>
+        <path d="M12 50h40" stroke="#e8b44a" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">久久艹久久日</span>
+    </a>
+    <nav class="nav-main" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选推荐</a>
+      <a href="/#updates">最新更新</a>
+      <a href="/#channels">分类入口</a>
+      <a href="/#deepthink">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">读者评论</a>
+    </nav>
+    <div class="head-tools">
+      <form class="search-box" role="search" id="searchForm" aria-label="站内查找">
+        <input type="search" id="searchInput" placeholder="查找条目或栏目" aria-label="输入关键词查找条目或栏目">
+        <button type="submit">查找</button>
+      </form>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+      <a class="btn btn-primary" href="/#channels" style="padding:8px 16px;font-size:14px">条目索引</a>
+    </div>
+  </div>
+  <div class="search-result">
+    <div class="sr-inner" id="searchResult" role="status" aria-live="polite"></div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="hero-eyebrow">长期更新台账 · 第 47 周</span>
+          <h1 id="hero-title">久久艹久久日</h1>
+          <p class="lead">一个把长期更新站点的条目变更、分组调整与访问体验拆开记录的观察索引。每周把新增条目、版本差异和读者反馈并排放，方便习惯按日期回看的人快速定位。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/#updates">查看本周更新</a>
+            <a class="btn btn-ghost" href="/#deepthink">读深度解析</a>
+          </div>
+          <div class="hero-stats">
+            <div><b>218</b><span>登记条目</span></div>
+            <div><b>14</b><span>本周变更</span></div>
+            <div><b>11</b><span>分类频道</span></div>
+            <div><b>38</b><span>可核对记录</span></div>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 360 360" role="img" aria-label="由圆点与弧线组成的条目索引图形">
+            <defs>
+              <radialGradient id="g1" cx="30%" cy="25%" r="80%">
+                <stop offset="0%" stop-color="#3f857c"/>
+                <stop offset="100%" stop-color="#12302f"/>
+              </radialGradient>
+            </defs>
+            <circle cx="180" cy="180" r="168" fill="url(#g1)" stroke="#ffe3ab" stroke-opacity=".35"/>
+            <circle cx="180" cy="180" r="132" fill="none" stroke="#ffe3ab" stroke-opacity=".22" stroke-dasharray="4 8"/>
+            <circle cx="180" cy="180" r="92" fill="none" stroke="#ffe3ab" stroke-opacity=".3"/>
+            <g fill="#e8b44a">
+              <circle cx="180" cy="62" r="10"/>
+              <circle cx="286" cy="180" r="8"/>
+              <circle cx="180" cy="298" r="9"/>
+              <circle cx="74" cy="180" r="8"/>
+            </g>
+            <g fill="#f4ede0" fill-opacity=".85">
+              <circle cx="236" cy="104" r="5"/>
+              <circle cx="258" cy="152" r="4"/>
+              <circle cx="214" cy="252" r="5"/>
+              <circle cx="118" cy="228" r="4"/>
+              <circle cx="104" cy="132" r="5"/>
+            </g>
+            <path d="M180 62 A118 118 0 0 1 286 180" fill="none" stroke="#ffe3ab" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M286 180 A106 106 0 0 1 180 298" fill="none" stroke="#e8b44a" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 9"/>
+            <text x="180" y="172" text-anchor="middle" fill="#ffe3ab" font-size="15" font-family="sans-serif">条目</text>
+            <text x="180" y="198" text-anchor="middle" fill="#f4ede0" font-size="13" font-family="sans-serif" font-opacity=".8">218 条登记</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- 主内容 -->
+      <div class="main-col">
+
+        <!-- 领域概览 -->
+        <section class="panel" id="overview" aria-labelledby="h-overview">
+          <h2 id="h-overview">领域概览：长期更新站点的四层结构</h2>
+          <p class="sub">从条目、批次、分组到回看入口，先把概念拆清楚。</p>
+          <p>习惯按日期追更的人，真正关心的通常不是首页排布，而是条目是否被替换、分组有没有挪位、旧链接还能不能打开。把长期更新的站点拆成四层看，很多困惑会自然消失。</p>
+          <div class="compare">
+            <div class="col-a">
+              <h3>结构层：条目与批次</h3>
+              <ul>
+                <li>条目指一条可单独定位的记录，带编号与登记日期。</li>
+                <li>批次是一天内集中登记的若干条目，公告条显示的“14 条”即一个批次。</li>
+                <li>同一批次内条目可按 OO-217 这类编号回查。</li>
+              </ul>
+            </div>
+            <div class="col-b">
+              <h3>导航层：分组与回看入口</h3>
+              <ul>
+                <li>分组解决条目变多后的定位问题，按内容类别划分。</li>
+                <li>回看入口按日期倒序，11 月 6 日到 10 月 12 日是最常被翻动的区间。</li>
+                <li>旧条目保留原编号，挪组只改所属分类。</li>
+              </ul>
+            </div>
+          </div>
+          <p style="margin-top:12px">四层里最容易出现误解的是第三层“变更记录”：条目被改写、删减或补录，都会在记录里留一行说明。10 月 23 日那批里，OO-144 因为补了一张截图，记录写了两行，但条目本身没有换版本号。看到这类多行记录时，先确认改的是内容还是附属材料。</p>
+          <ul class="list-compact" style="margin-top:6px">
+            <li><time datetime="2026-11-06">11-06</time><span class="tit">条目 OO-217 从「旧档整理」并入「分类归档」</span><span class="src">变更记录</span></li>
+            <li><time datetime="2026-10-29">10-29</time><span class="tit">OO-301 补录 2024 年 3 月的一条来源说明</span><span class="src">变更记录</span></li>
+            <li><time datetime="2026-10-15">10-15</time><span class="tit">回看入口新增“按批次筛选”开关</span><span class="src">入口说明</span></li>
+          </ul>
+        </section>
+
+        <!-- 精选内容推荐 -->
+        <section class="panel" id="picks" aria-labelledby="h-picks">
+          <h2 id="h-picks">精选内容推荐</h2>
+          <p class="sub">本周编辑挑选的 4 条，分别来自不同分组，覆盖新旧两档。</p>
+          <div class="card-grid">
+            <article class="card">
+              <img class="thumb" src="https://picsum.photos/seed/jiujiuoo217/480/300" width="480" height="300" loading="lazy" alt="条目 OO-217 的分组变更示意图，桌面平铺的纸质编号卡">
+              <div class="body">
+                <span class="pill">分组调整</span>
+                <h3>OO-217 挪组后的连带影响</h3>
+                <p>从「旧档整理」到「分类归档」，编号未变，收藏夹里的旧地址仍能跳转。</p>
+                <div class="meta"><span>11-06</span><span>变更记录</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img class="thumb" src="https://picsum.photos/seed/jiujiuoo301/480/300" width="480" height="300" loading="lazy" alt="条目 OO-301 的来源说明打印稿与放大镜">
+              <div class="body">
+                <span class="pill">来源补录</span>
+                <h3>OO-301 补的那条来源说明</h3>
+                <p>2024 年 3 月的原始出处被补上，记录两行，版本号不变。</p>
+                <div class="meta"><span>10-29</span><span>条目说明</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img class="thumb" src="https://picsum.photos/seed/jiujiubatch47/480/300" width="480" height="300" loading="lazy" alt="第 47 周批次登记表格的局部翻拍">
+              <div class="body">
+                <span class="pill">批次复盘</span>
+                <h3>第 47 周批次里的 14 条</h3>
+                <p>9 条新增、3 条改写、2 条补录，改写集中在「分类归档」。</p>
+                <div class="meta"><span>11-08</span><span>周批次</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img class="thumb" src="https://picsum.photos/seed/jiujiureplay/480/300" width="480" height="300" loading="lazy" alt="按日期倒序排列的回看入口截图">
+              <div class="body">
+                <span class="pill">回看入口</span>
+                <h3>按批次筛选怎么用</h3>
+                <p>10-15 上线的小开关，能把 10 月 12 日之前和之后的记录分两屏看。</p>
+                <div class="meta"><span>10-15</span><span>入口说明</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 最新更新 -->
+        <section class="panel" id="updates" aria-labelledby="h-updates">
+          <h2 id="h-updates">最新更新</h2>
+          <p class="sub">按登记时间倒序，标注改动类型与可核对位置。</p>
+          <ul class="list-compact">
+            <li><time datetime="2026-11-08">11-08</time><span class="tit">第 47 周批次汇总页上线，含 14 条变更明细</span><span class="src">周批次</span></li>
+            <li><time datetime="2026-11-06">11-06</time><span class="tit">OO-217 分组由「旧档整理」改为「分类归档」</span><span class="src">变更记录</span></li>
+            <li><time datetime="2026-11-06">11-06</time><span class="tit">OO-233 改写第三段，补充 2025 年 7 月的对照数据</span><span class="src">变更记录</span></li>
+            <li><time datetime="2026-11-03">11-03</time><span class="tit">条目索引页新增 11 个分类频道的直达锚点</span><span class="src">入口说明</span></li>
+            <li><time datetime="2026-10-29">10-29</time><span class="tit">OO-301 补录来源说明两行，版本号保持 OO-301</span><span class="src">变更记录</span></li>
+            <li><time datetime="2026-10-23">10-23</time><span class="tit">OO-144 补截图一张，正文未改动</span><span class="src">变更记录</span></li>
+            <li><time datetime="2026-10-15">10-15</time><span class="tit">回看入口上线“按批次筛选”开关</span><span class="src">入口说明</span></li>
+            <li><time datetime="2026-10-12">10-12</time><span class="tit">批量修正 6 条条目的日期格式，统一为两位月日</span><span class="src">规范修订</span></li>
+          </ul>
+        </section>
+
+        <!-- 分类入口 -->
+        <section class="panel" id="channels" aria-labelledby="h-channels">
+          <h2 id="h-channels">分类入口：11 个常查频道</h2>
+          <p class="sub">按条目用途划分，括号内为当前登记数。</p>
+          <div class="channel-grid">
+            <a href="/#updates">批次更新记录 <small>14 条 · 本周</small></a>
+            <a href="/#deepthink">版本差异对照 <small>9 组 · 已核对</small></a>
+            <a href="/#guide">条目回看方法 <small>5 步 · 含截图</small></a>
+            <a href="/#picks">旧档整理专区 <small>41 条</small></a>
+            <a href="/#overview">分类归档说明 <small>28 条</small></a>
+            <a href="/#faq">来源补录问答 <small>12 问</small></a>
+            <a href="/#comments">读者反馈汇总 <small>36 条</small></a>
+            <a href="/#timeline">月度时间线 <small>6 个节点</small></a>
+            <a href="/#ranking">高频回看榜 <small>10 项</small></a>
+            <a href="/#news">相关资讯摘记 <small>8 条</small></a>
+            <a href="/#tags">关键词索引 <small>24 个词</small></a>
+          </div>
+        </section>
+
+        <!-- 深度解析 -->
+        <section class="panel deepthink" id="deepthink" aria-labelledby="h-deep">
+          <h2 id="h-deep">深度解析：编号不变不等于内容没变</h2>
+          <p class="sub">全页唯一主体阅读区，判断附可核对的中段。</p>
+          <p>长期更新站点里最常见的误判，是把“编号没变”当成“内容没动”。编号是定位用的，不是版本号。OO-217 在 11 月 6 日只改了所属分组，正文逐字未动；而 OO-233 在同一天改了第三段，编号同样保持原样。两条记录并列放在 11 月 6 日批次里，只读编号就会漏掉后者。</p>
+
+          <h3>可核对判断一：改写集中在“分类归档”分组</h3>
+          <p>把 10 月 12 日到 11 月 8 日的记录按分组统计，改写类共 9 条，其中 6 条落在「分类归档」，2 条在「旧档整理」，1 条在「来源说明」。同一区间新增 23 条，分布均匀。若某周改写数突然超过新增数，通常意味着该周以整理旧内容为主，新条目的登记会推迟到下一批。</p>
+          <div class="fact-box">
+            <table>
+              <thead>
+                <tr><th>区间</th><th>新增</th><th>改写</th><th>补录</th><th>主要分组</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>10-12 至 10-18</td><td>5</td><td>2</td><td>1</td><td>旧档整理</td></tr>
+                <tr><td>10-19 至 10-25</td><td>4</td><td>1</td><td>2</td><td>来源说明</td></tr>
+                <tr><td>10-26 至 11-01</td><td>6</td><td>2</td><td>1</td><td>分类归档</td></tr>
+                <tr><td>11-02 至 11-08</td><td>9</td><td>3</td><td>2</td><td>分类归档</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>可核对判断二：补录不会改版本号，截图会</h3>
+          <p>这条差异来自两组记录。10 月 23 日，OO-144 补了一张截图，编号与版本号都未变，记录写两行；10 月 29 日，OO-301 补来源说明，同样两行、同样不改号。而 9 月的一次正文改写（编号 OO-198）在记录里单独标了 v2。可以据此形成一个操作假设：记录行数对应附属材料，版本号对应正文。这个假设可以被下一批记录推翻——只要出现一行补录却带版本号的情况。</p>
+          <div class="quote" style="margin:14px 0">“编号是门牌，版本号才是装修记录。”——这条说法在读者评论里出现过两次，但它只能解释正文改写，解释不了截图补录。</div>
+
+          <h3>可核对判断三：回看入口的排序与批次筛选并存时，以批次为准</h3>
+          <p>10 月 15 日上线的“按批次筛选”开关会改变默认视图。若同时开启倒序与批次筛选，页面先按批次分组，再在组内倒序，此时 10 月 12 日之前的记录会被压到第二屏。核对方法是看每条记录左侧的月日是否仍严格递减；一旦出现跨批次混排，说明筛选没有生效。这个判断不依赖站点说明，只依赖肉眼可数的日期顺序。</p>
+
+          <h3>说法差异：批次“14 条”算不算改写</h3>
+          <p>11 月 6 日公告写“14 条版本变更”，而明细页把 14 拆成 9 新增、3 改写、2 补录。两种说法都对，差别在统计口径：公告把三种都叫“变更”，明细页按动作分开。遇到口径不一致时，先看明细页的分项数，再看公告的合计，两者能对上即可，不必纠结用词。</p>
+        </section>
+
+        <!-- 体验指南 -->
+        <section class="panel" id="guide" aria-labelledby="h-guide">
+          <h2 id="h-guide">体验指南：五步定到具体条目</h2>
+          <p class="sub">从首页到条目详情，每步都给了可核对的落点。</p>
+          <ol class="steps">
+            <li>
+              <h3>先看公告条的批次数字</h3>
+              <p>公告条显示的“14 条”对应本周批次。数字异常大时，多半是补录集中上线，不代表新增变多。</p>
+            </li>
+            <li>
+              <h3>用站内查找输入编号前缀</h3>
+              <p>输入 OO-2 能列出 217、233 这类编号；输入“归档”能列出分组名。两种输入都支持，结果区会标出命中位置。</p>
+            </li>
+            <li>
+              <h3>在变更记录里确认动作类型</h3>
+              <p>新增、改写、补录三种动作的核对位置不同：改写看正文段号，补录看记录行数。</p>
+            </li>
+            <li>
+              <h3>打开回看入口并核对日期顺序</h3>
+              <p>开启批次筛选后，确认左侧月日严格递减；出现跳序就说明筛选与倒序有冲突。</p>
+            </li>
+            <li>
+              <h3>把条目编号与登记日期一起记下</h3>
+              <p>只记编号会漏掉分组变动；编号加日期，才能在下一次批次里准确定位到同一行。</p>
+            </li>
+          </ol>
+        </section>
+
+        <!-- 相关资讯 -->
+        <section class="panel" id="news" aria-labelledby="h-news">
+          <h2 id="h-news">相关资讯摘记</h2>
+          <p class="sub">每条只保留来源、日期与一句关键差异，不复述标题。</p>
+          <ul class="list-compact">
+            <li><time datetime="2026-11-07">11-07</time><span class="tit">条目登记规范第 6 版发布，日期格式统一为两位月日</span><span class="src">规范文档</span></li>
+            <li><time datetime="2026-11-04">11-04</time><span class="tit">10 月批次复盘：改写数首次超过补录数</span><span class="src">月度复盘</span></li>
+            <li><time datetime="2026-10-30">10-30</time><span class="tit">OO-301 来源说明引发讨论，讨论集中在记录行数含义</span><span class="src">读者来信</span></li>
+            <li><time datetime="2026-10-20">10-20</time><span class="tit">回看入口开关上线后的第一次可用性检查，3 处跳序被修正</span><span class="src">检查记录</span></li>
+            <li><time datetime="2026-10-14">10-14</time><span class="tit">旧档整理专区达到 41 条，分组边界重新划定</span><span class="src">分组说明</span></li>
+          </ul>
+        </section>
+
+        <!-- FAQ -->
+        <section class="panel" id="faq" aria-labelledby="h-faq">
+          <h2 id="h-faq">常见问题</h2>
+          <p class="sub">问题都指向具体动作或具体条目。</p>
+          <div class="faq">
+            <details>
+              <summary>编号没变，为什么正文少了半段？</summary>
+              <div class="ans">编号是定位符，正文改写不改编号。核对方式是看变更记录里有没有“改写”一行，以及版本号是否变化。OO-233 在 11 月 6 日就是这种情况：编号 OO-233 不动，第三段被替换，记录里标了改写。</div>
+            </details>
+            <details>
+              <summary>OO-217 挪组之后，旧收藏的地址还能打开吗？</summary>
+              <div class="ans">能。挪组只改所属分类，条目标识沿用 OO-217，旧地址会跳到新分组下的同一条目。如果收藏夹里存的是分组名而非条目编号，就需要重新从分类归档进去。</div>
+            </details>
+            <details>
+              <summary>补录和版本更新有什么区别？</summary>
+              <div class="ans">补录添加的是来源说明、截图这类附属材料，通常写两行记录且不动版本号；版本更新改的是正文，会标出 v2 这类版本标识。10 月 23 日的 OO-144 与 10 月 29 日的 OO-301 都属于前者。</div>
+            </details>
+            <details>
+              <summary>批次筛选开启后，为什么 10 月 12 日之前的记录不见了？</summary>
+              <div class="ans">筛选先按批次分组再在组内倒序，较早批次被压到第二屏。向下滚动即可看到，或临时关掉筛选回到纯倒序视图。判断筛选是否生效，看左侧月日是否仍然递减。</div>
+            </details>
+            <details>
+              <summary>公告条的数字和明细页对不上，算错误吗？</summary>
+              <div class="ans">多数是统计口径不同。公告把新增、改写、补录合计为“变更”，明细页分三类列。只要明细页三类相加等于公告数字，就不算错；对不上时以明细页为准。</div>
+            </details>
+            <details>
+              <summary>站内查找支持哪些输入？</summary>
+              <div class="ans">支持编号前缀（如 OO-2）、分组名（如分类归档）、栏目名（如最新更新）。没有命中时结果区会提示未找到，并建议改成更短的编号前缀再试。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 用户评论 -->
+        <section class="panel" id="comments" aria-labelledby="h-comments">
+          <h2 id="h-comments">读者评论</h2>
+          <p class="sub">评论保留原话，部分带中性或批评意见。</p>
+          <div class="comments">
+            <div class="comment">
+              <div class="who"><span class="avatar">林</span><span>林岸</span><span class="stars">★★★★☆</span><span>11-07</span></div>
+              <p>OO-217 挪组这件事写得比公告清楚，旧地址还能跳转这点我很在意，确认过一次才放心。</p>
+              <a class="ref" href="/#deepthink">指向：深度解析·编号不变不等于内容没变</a>
+            </div>
+            <div class="comment">
+              <div class="who"><span class="avatar">陈</span><span>陈默</span><span class="stars">★★★☆☆</span><span>11-06</span></div>
+              <p>批次筛选开了以后确实会少一屏，第一次用还以为记录被删了。建议默认把提示写在开关旁边。</p>
+              <a class="ref" href="/#guide">指向：体验指南·第 4 步</a>
+            </div>
+            <div class="comment">
+              <div class="who"><span class="avatar">周</span><span>周行</span><span class="stars">★★★★★</span><span>11-05</span></div>
+              <p>按分组统计改写数那张表有用，9 条改写里 6 条落在分类归档，和我自己翻记录的感觉一致。</p>
+              <a class="ref" href="/#deepthink">指向：深度解析·可核对判断一</a>
+            </div>
+            <div class="comment">
+              <div class="who"><span class="avatar">吴</span><span>吴一苇</span><span class="stars">★★☆☆☆</span><span>11-03</span></div>
+              <p>OO-301 补来源说明这事，记录写两行但看不出补的是哪一年，要点进条目才知道是 2024 年 3 月。</p>
+              <a class="ref" href="/#updates">指向：最新更新·10-29 记录</a>
+            </div>
+            <div class="comment">
+              <div class="who"><span class="avatar">何</span><span>何知远</span><span class="stars">★★★★☆</span><span>11-02</span></div>
+              <p>五步指南里第三步最实用，改写看段号、补录看行数，这两条分开之后我不再拿编号当版本号用了。</p>
+              <a class="ref" href="/#guide">指向：体验指南·第 3 步</a>
+            </div>
+            <div class="comment">
+              <div class="who"><span class="avatar">赵</span><span>赵青禾</span><span class="stars">★★★☆☆</span><span>10-30</span></div>
+              <p>公告条写“版本变更”有点宽，明明一半是补录。改成“变更”两个字就没人纠结口径了。</p>
+              <a class="ref" href="/#overview">指向：领域概览·结构层</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 时间线 -->
+        <section class="panel" id="timeline" aria-labelledby="h-timeline">
+          <h2 id="h-timeline">月度时间线</h2>
+          <p class="sub">只列改变了登记方式或分组边界的节点。</p>
+          <ul class="timeline">
+            <li>
+              <b>11 月 6 日 · 批次 47 登记完成</b>
+              <span>14 条变更，9 新增 / 3 改写 / 2 补录</span>
+              <p>OO-217 挪组、OO-233 第三段改写都在这一批，明细页按动作分列。</p>
+            </li>
+            <li>
+              <b>10 月 29 日 · OO-301 来源说明补录</b>
+              <span>记录两行，版本号不变</span>
+              <p>补的是 2024 年 3 月的原始出处，不影响正文段落编号。</p>
+            </li>
+            <li>
+              <b>10 月 15 日 · 回看入口上线批次筛选</b>
+              <span>默认视图加入开关</span>
+              <p>开启后按批次分组，组内倒序；较早批次移到第二屏。</p>
+            </li>
+            <li>
+              <b>10 月 12 日 · 日期格式统一</b>
+              <span>6 条条目批量修正</span>
+              <p>月日改为两位写法，排序逻辑未变，纯格式修订。</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 引语卡 -->
+        <section class="panel" id="voices" aria-labelledby="h-voices">
+          <h2 id="h-voices">整理者说</h2>
+          <p class="sub">来自条目整理者的一段原话，关于为什么保留旧编号。</p>
+          <div class="quote-card">
+            <blockquote>“旧编号一直留着，是因为有人两年前存了收藏。分组可以挪，编号一换，那些收藏就全断了。我们宁可让记录多写一行说明。”</blockquote>
+            <cite>——条目整理者 老葛，11 月 6 日批次说明会</cite>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 侧栏 -->
+      <aside class="side" aria-label="侧栏辅助导航">
+        <div class="side-card">
+          <h2>栏目导航</h2>
+          <p class="sub">随滚动高亮当前板块。</p>
+          <ul class="side-nav" id="sideNav">
+            <li><a href="/#overview">领域概览</a></li>
+            <li><a href="/#picks">精选推荐</a></li>
+            <li><a href="/#updates">最新更新</a></li>
+            <li><a href="/#channels">分类入口</a></li>
+            <li><a href="/#deepthink">深度解析</a></li>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#comments">读者评论</a></li>
+            <li><a href="/#timeline">月度时间线</a></li>
+          </ul>
+        </div>
+        <div class="side-card" id="ranking">
+          <h2>高频回看榜</h2>
+          <p class="sub">按 10 月 12 日至 11 月 8 日的回看次数排。</p>
+          <ol class="rank-list">
+            <li><a href="/#deepthink">OO-217 分组变更</a><small>11-06 · 变更记录</small></li>
+            <li><a href="/#guide">五步定条目</a><small>指南 · 被引 6 次</small></li>
+            <li><a href="/#updates">OO-301 来源补录</a><small>10-29 · 两行记录</small></li>
+            <li><a href="/#deepthink">改写分布统计表</a><small>深度解析 · 4 区间</small></li>
+            <li><a href="/#timeline">批次筛选上线</a><small>10-15 · 入口说明</small></li>
+            <li><a href="/#news">登记规范第 6 版</a><small>11-07 · 规范文档</small></li>
+          </ol>
+        </div>
+        <div class="side-card" id="tags">
+          <h2>关键词索引</h2>
+          <ul class="tag-index">
+            <li><a href="/#updates">批次更新记录</a></li>
+            <li><a href="/#deepthink">版本差异对照</a></li>
+            <li><a href="/#guide">条目回看方法</a></li>
+            <li><a href="/#updates">OO-217 分组</a></li>
+            <li><a href="/#updates">OO-301 补录</a></li>
+            <li><a href="/#deepthink">改写分布</a></li>
+            <li><a href="/#faq">来源补录问答</a></li>
+            <li><a href="/#guide">按批次筛选</a></li>
+            <li><a href="/#overview">分类归档说明</a></li>
+            <li><a href="/#timeline">登记规范版本</a></li>
+            <li><a href="/#picks">旧档整理专区</a></li>
+            <li><a href="/#ranking">高频回看榜</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="margin-bottom:10px">
+          <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#e8b44a"/>
+            <circle cx="24" cy="26" r="9" fill="#163b3a"/>
+            <circle cx="42" cy="38" r="9" fill="#f4ede0"/>
+            <path d="M12 50h40" stroke="#163b3a" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-name">久久艹久久日</span>
+        </div>
+        <p>把条目编号、批次与分组变化按日期落账，方便回看时定位到同一行。</p>
+        <p>站点内容包含示例数据，条目编号、日期与记录行数用于说明登记规则，不指向真实外部地址。</p>
+      </div>
+      <div>
+        <h3>主栏目</h3>
+        <ul class="foot-links">
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>查阅辅助</h3>
+        <ul class="foot-links">
+          <li><a href="/#deepthink">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">读者评论</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>边栏与索引</h3>
+        <ul class="foot-links">
+          <li><a href="/#ranking">高频回看榜</a></li>
+          <li><a href="/#tags">关键词索引</a></li>
+          <li><a href="/#timeline">月度时间线</a></li>
+          <li><a href="/#news">相关资讯摘记</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 久久艹久久日 · 条目索引与批次登记说明</span>
+      <span>页脚更新时间：2026-11-08，对应正文「最新更新」首条与第 47 周批次汇总</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var menuBtn = document.getElementById('menuBtn');
+  var mainNav = document.getElementById('mainNav');
+  if (menuBtn && mainNav) {
+    menuBtn.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.textContent = open ? '收起' : '菜单';
+    });
+    mainNav.addEventListener('click', function(e){
+      if (e.target.tagName === 'A' && window.matchMedia('(max-width:960px)').matches) {
+        mainNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = '菜单';
+      }
+    });
+  }
+
+  /* 站内查找 */
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var box = document.getElementById('searchResult');
+  var data = [
+    {t:'OO-217 分组变更', d:'11-06 由旧档整理并入分类归档', u:'/#updates'},
+    {t:'OO-233 第三段改写', d:'11-06 正文改写，编号不变', u:'/#deepthink'},
+    {t:'OO-301 来源补录', d:'10-29 补 2024 年 3 月来源说明，两行记录', u:'/#updates'},
+    {t:'OO-144 补截图', d:'10-23 正文未动，记录两行', u:'/#updates'},
+    {t:'分类归档说明', d:'分组边界与旧档整理的区别', u:'/#overview'},
+    {t:'旧档整理专区', d:'41 条旧条目，10-14 重新划界', u:'/#picks'},
+    {t:'按批次筛选', d:'10-15 上线的回看入口开关', u:'/#guide'},
+    {t:'版本差异对照', d:'编号与版本号的区别', u:'/#deepthink'},
+    {t:'批次更新记录', d:'第 47 周 14 条变更明细', u:'/#updates'},
+    {t:'月度时间线', d:'6 个改变登记方式的节点', u:'/#timeline'},
+    {t:'高频回看榜', d:'按 10-12 至 11-08 回看次数排', u:'/#ranking'},
+    {t:'来源补录问答', d:'补录与版本更新的区别', u:'/#faq'}
+  ];
+
+  function esc(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  if (form && input && box) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var q = input.value.trim().toLowerCase();
+      if (!q) {
+        box.classList.add('show');
+        box.innerHTML = '请输入条目编号前缀或栏目名，例如 <em>OO-2</em>、<em>分类归档</em>。';
+        return;
+      }
+      var hit = data.filter(function(item){
+        return item.t.toLowerCase().indexOf(q) > -1 || item.d.toLowerCase().indexOf(q) > -1;
+      }).slice(0, 5);
+      box.classList.add('show');
+      if (!hit.length) {
+        box.innerHTML = '未找到与「<em>' + esc(input.value.trim()) + '</em>」匹配的条目或栏目。可以尝试更短的编号前缀，例如 OO-2，或换用分组名「分类归档」。';
+        return;
+      }
+      var html = '找到 ' + hit.length + ' 条结果：';
+      hit.forEach(function(item){
+        html += '<div style="margin-top:6px"><a href="' + item.u + '">' + esc(item.t) + '</a> · ' + esc(item.d) + '</div>';
+      });
+      box.innerHTML = html;
+    });
+  }
+
+  /* 侧栏滚动高亮 */
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a, .nav-main a'));
+  var sections = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  function uniqueSections(){
+    var seen = [];
+    sections.forEach(function(s){ if (seen.indexOf(s) === -1) seen.push(s); });
+    return seen;
+  }
+  var uniq = uniqueSections();
+
+  function setActive(id){
+    sideLinks.forEach(function(a){
+      var href = a.getAttribute('href');
+      if (href === '/#' + id) { a.classList.add('active'); }
+      else { a.classList.remove('active'); }
+    });
+  }
+
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function(){
+      var offset = 150;
+      var current = uniq[0] ? uniq[0].id : null;
+      uniq.forEach(function(sec){
+        if (sec.getBoundingClientRect().top - offset <= 0) current = sec.id;
+      });
+      if (current) setActive(current);
+
+      var topBtn = document.getElementById('toTop');
+      if (topBtn) {
+        if (window.scrollY > 500) topBtn.classList.add('show');
+        else topBtn.classList.remove('show');
+      }
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('toTop');
+  if (topBtn) {
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"久久艹久久日",
+  "alternateName":"批次登记与条目索引",
+  "description":"记录长期更新站点的条目批次、分组变化与回看入口，按日期整理可核对变更记录。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"编号没变，为什么正文少了半段？","acceptedAnswer":{"@type":"Answer","text":"编号是定位符，正文改写不改编号。核对变更记录里的改写行与版本号是否变化即可，OO-233 在 11 月 6 日就是编号不动、第三段被替换。"}},
+    {"@type":"Question","name":"OO-217 挪组之后，旧收藏的地址还能打开吗？","acceptedAnswer":{"@type":"Answer","text":"能。挪组只改所属分类，条目标识沿用 OO-217，旧地址跳到新分组下的同一条目。"}},
+    {"@type":"Question","name":"补录和版本更新有什么区别？","acceptedAnswer":{"@type":"Answer","text":"补录添加来源说明、截图等附属材料，通常写两行记录且不动版本号；版本更新改正文并标注版本标识，如 10 月 23 日的 OO-144 与 10 月 29 日的 OO-301。"}},
+    {"@type":"Question","name":"批次筛选开启后，为什么 10 月 12 日之前的记录不见了？","acceptedAnswer":{"@type":"Answer","text":"筛选先按批次分组再在组内倒序，较早批次被压到第二屏，向下滚动即可看到，或临时关掉筛选回到纯倒序视图。"}},
+    {"@type":"Question","name":"公告条的数字和明细页对不上，算错误吗？","acceptedAnswer":{"@type":"Answer","text":"多数是统计口径不同，公告把新增、改写、补录合计为变更，明细页分三类列，三类相加等于公告数字即对得上。"}}
+  ]
+}
+</script>
+</body>
+  </html>
