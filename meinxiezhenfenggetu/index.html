@@ -1,0 +1,1362 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>美女写真-人像摄影风格图鉴</title>
+<meta name="description" content="美女写真图鉴：梳理棚拍、外景、胶片、AI生成四类人像写真的风格与拍摄参数，收录2026年11月最新作品与摄影师访谈，提供选片、授权与后期判断参考。">
+<meta name="keywords" content="美女写真">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b0455e'/%3E%3Ccircle cx='32' cy='24' r='10' fill='%23f7e8e6'/%3E%3Cpath d='M12 56c2-12 10-18 20-18s18 6 20 18z' fill='%23f7e8e6'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "美女写真",
+  "description": "人像写真风格图鉴与拍摄参数索引",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "外景写真遇到阴天怎么拍才不会灰蒙蒙？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "阴天属于大柔光箱，反差低但色温偏冷。把白平衡手动设到5200K左右并加0.3EV曝光补偿，再让人物靠近深色墙面或树荫边缘，皮肤的高光层次就会回来。11月2日那组外景样片用了反光板补下颌光，成片没有后期压灰。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "棚拍写真的柔光箱尺寸怎么选？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "柔光箱越大，过渡越缓。拍半身常用90×120cm八角箱，放在人物斜前45度、高于眼睛20cm的位置；拍全身若用同样尺寸，脚部会掉光，改用120×180cm的条形箱加地灯。样片EXIF显示主灯功率1/8，背景灯1/32。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "胶片写真和数码转胶片调色差别在哪？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "差别在颗粒形态和高光肩部。Portra 400在欠曝一档再推回时，颗粒呈团状且高光不死白；数码转胶片调色颗粒是均匀噪点，高光仍会触及255。判断时看头发高光边缘有没有断层。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "AI生成的人像写真能用于商业海报吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "取决于平台授权条款和人物肖像来源。多数生成平台默认授予商用权，但若参考图含真人肖像，仍需额外授权。11月5日某品牌海报争议就是参考图未授权，平台条款并未覆盖。合同里应写明生成图的权属与 indemnity。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "写真选片时先看构图还是先看表情？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先筛表情，再排构图。表情有瑕疵的底片几乎无法修，构图可裁切二次构图。选片师常用三遍法：第一遍只看眼睛，第二遍看手部与姿态，第三遍才比构图与光比。"
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --main:#b0455e;
+  --main-dark:#7d2b3f;
+  --main-soft:#f7e8e6;
+  --accent:#2f5d62;
+  --accent-soft:#e3eeea;
+  --ink:#241f21;
+  --ink-2:#4e4548;
+  --ink-3:#7a6f72;
+  --line:#e6dcd9;
+  --bg:#fdfaf8;
+  --card:#ffffff;
+  --radius:14px;
+  --radius-s:9px;
+  --shadow:0 1px 2px rgba(36,31,33,.05),0 8px 24px rgba(36,31,33,.06);
+  --shadow-hover:0 2px 4px rgba(36,31,33,.06),0 12px 30px rgba(36,31,33,.1);
+  --sp-1:8px; --sp-2:14px; --sp-3:22px; --sp-4:34px; --sp-5:52px;
+  --fs-xs:12.5px; --fs-s:14px; --fs-m:16px; --fs-l:20px; --fs-xl:26px; --fs-2xl:34px;
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none!important;animation:none!important;}
+}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  font-size:var(--fs-m);
+  -webkit-font-smoothing:antialiased;
+  padding-top:0;
+}
+a{color:var(--main-dark);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;display:block;}
+h1,h2,h3{line-height:1.35;font-weight:700;}
+h2{font-size:var(--fs-xl);letter-spacing:.01em;}
+h3{font-size:var(--fs-l);}
+p{color:var(--ink-2);}
+ul,ol{padding-left:1.2em;}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px;}
+
+/* ---------- 吸顶公告条 ---------- */
+.announce{
+  background:var(--main-dark);
+  color:#fff8f4;
+  font-size:var(--fs-xs);
+  position:sticky;
+  top:0;
+  z-index:60;
+  border-bottom:1px solid rgba(255,255,255,.15);
+}
+.announce-inner{
+  max-width:1240px;margin:0 auto;padding:7px var(--sp-3);
+  display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;
+}
+.announce b{color:#ffd9c9;font-weight:600;}
+.announce a{color:#fff8f4;text-decoration:underline;text-underline-offset:2px;white-space:nowrap;}
+
+/* ---------- 吸顶页头 ---------- */
+.site-header{
+  position:sticky;
+  top:30px;
+  z-index:55;
+  background:rgba(253,250,248,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 4px 18px rgba(36,31,33,.05);
+}
+.header-inner{
+  max-width:1240px;margin:0 auto;padding:10px var(--sp-3);
+  display:flex;align-items:center;gap:var(--sp-3);
+}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.brand-mark{
+  width:40px;height:40px;flex-shrink:0;border-radius:11px;
+  background:linear-gradient(140deg,var(--main),var(--main-dark) 70%);
+  display:grid;place-items:center;
+  box-shadow:0 4px 12px rgba(176,69,94,.28);
+}
+.brand-mark svg{width:24px;height:24px;display:block;}
+.brand-text{font-size:var(--fs-l);font-weight:800;letter-spacing:.04em;color:var(--ink);}
+.brand-text:hover{text-decoration:none;color:var(--main-dark);}
+.site-nav{margin-left:auto;}
+.site-nav ul{list-style:none;display:flex;gap:2px;padding:0;}
+.site-nav a{
+  display:block;padding:7px 11px;border-radius:8px;
+  font-size:var(--fs-s);color:var(--ink-2);font-weight:500;white-space:nowrap;
+  transition:background .18s,color .18s;
+}
+.site-nav a:hover,.site-nav a.active{background:var(--main-soft);color:var(--main-dark);text-decoration:none;}
+.header-tools{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.search-box{
+  display:flex;align-items:center;gap:6px;
+  border:1px solid var(--line);border-radius:20px;
+  padding:4px 6px 4px 12px;background:var(--card);
+}
+.search-box input{
+  border:none;outline:none;background:transparent;
+  font-family:var(--sans);font-size:var(--fs-s);width:130px;color:var(--ink);
+}
+.search-box button{
+  border:none;background:var(--main);color:#fff;border-radius:16px;
+  padding:5px 12px;font-size:var(--fs-xs);cursor:pointer;font-family:var(--sans);
+  transition:background .18s;
+}
+.search-box button:hover{background:var(--main-dark);}
+.nav-toggle{
+  display:none;border:1px solid var(--line);background:var(--card);
+  border-radius:9px;padding:7px 11px;cursor:pointer;font-size:var(--fs-s);
+  font-family:var(--sans);color:var(--ink);align-items:center;gap:5px;
+}
+.nav-toggle .bars{display:inline-block;width:14px;height:10px;position:relative;}
+.nav-toggle .bars::before,.nav-toggle .bars::after{
+  content:"";position:absolute;left:0;width:14px;height:2px;background:var(--ink);border-radius:2px;
+}
+.nav-toggle .bars::before{top:0;}
+.nav-toggle .bars::after{bottom:0;}
+
+/* 搜索反馈 */
+.search-feedback{
+  display:none;max-width:1240px;margin:0 auto;padding:0 var(--sp-3);
+}
+.search-feedback.show{display:block;padding-bottom:10px;}
+.search-feedback .fb-inner{
+  background:var(--accent-soft);border:1px solid #c7ddd6;border-radius:var(--radius-s);
+  padding:10px 14px;font-size:var(--fs-s);color:var(--accent);
+}
+.search-feedback .fb-inner strong{color:var(--ink);}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 420px at 88% -10%, #f3d7d2 0%, transparent 62%),
+    radial-gradient(700px 380px at -8% 108%, #dbe8e3 0%, transparent 58%),
+    var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  max-width:1240px;margin:0 auto;padding:var(--sp-5) var(--sp-3) var(--sp-4);
+  display:grid;grid-template-columns:1.05fr .95fr;gap:var(--sp-4);align-items:center;
+  position:relative;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:var(--fs-xs);letter-spacing:.14em;color:var(--main-dark);
+  background:var(--main-soft);border:1px solid #ecd0cc;
+  padding:5px 12px;border-radius:20px;font-weight:600;margin-bottom:18px;
+}
+.hero-eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--main);display:inline-block;}
+.hero h1{
+  font-size:clamp(38px,5.4vw,62px);
+  font-family:var(--serif);
+  letter-spacing:.04em;
+  color:var(--ink);
+  margin-bottom:18px;
+  line-height:1.15;
+}
+.hero h1 em{
+  font-style:normal;color:var(--main-dark);
+  background:linear-gradient(transparent 68%,#f0c9c2 68%);
+  padding:0 4px;
+}
+.hero-lead{
+  font-size:17px;color:var(--ink-2);max-width:44ch;margin-bottom:var(--sp-3);
+}
+.hero-lead strong{color:var(--ink);font-weight:600;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:var(--sp-3);}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:11px 22px;border-radius:24px;font-size:var(--fs-s);font-weight:600;
+  transition:transform .18s,box-shadow .18s,background .18s;
+  border:1px solid transparent;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px);}
+.btn-primary{background:var(--main);color:#fff;box-shadow:0 6px 16px rgba(176,69,94,.24);}
+.btn-primary:hover{background:var(--main-dark);}
+.btn-ghost{background:transparent;color:var(--main-dark);border-color:#e2c4c0;}
+.btn-ghost:hover{background:var(--main-soft);}
+.hero-stats{
+  display:flex;flex-wrap:wrap;gap:var(--sp-3);
+  border-top:1px dashed var(--line);padding-top:18px;
+}
+.hero-stats div{line-height:1.35;}
+.hero-stats b{display:block;font-size:24px;font-weight:800;color:var(--main-dark);font-family:var(--serif);}
+.hero-stats span{font-size:var(--fs-xs);color:var(--ink-3);letter-spacing:.05em;}
+
+/* 首屏原创视觉 */
+.hero-art{position:relative;aspect-ratio:5/4.4;min-height:300px;}
+.hero-art .portrait-frame{
+  position:absolute;inset:6% 8% 4% 6%;
+  border-radius:120px 120px 18px 18px;
+  background:
+    linear-gradient(180deg,#e7c9c1 0%,#cfa49a 38%,#8e5b52 100%);
+  box-shadow:0 24px 60px rgba(125,43,63,.26);
+  overflow:hidden;
+}
+.hero-art .portrait-frame::before{
+  content:"";position:absolute;
+  width:46%;aspect-ratio:1/1.18;
+  left:50%;top:22%;transform:translateX(-50%);
+  background:radial-gradient(circle at 42% 36%,#f6dcd2 0%,#e8bfb2 52%,#c99386 100%);
+  border-radius:48% 48% 46% 46%;
+  box-shadow:inset -12px -18px 30px rgba(125,43,63,.28);
+}
+.hero-art .portrait-frame::after{
+  content:"";position:absolute;
+  width:74%;height:44%;left:50%;bottom:-6%;transform:translateX(-50%);
+  background:linear-gradient(180deg,#7d2b3f,#5c1c2c);
+  border-radius:48% 48% 0 0;
+  box-shadow:0 -6px 18px rgba(125,43,63,.3);
+}
+.hero-art .light-leak{
+  position:absolute;width:120px;height:120px;border-radius:50%;
+  background:radial-gradient(circle,#fff4d6 0%,rgba(255,244,214,0) 70%);
+  right:2%;top:10%;filter:blur(2px);
+}
+.hero-art .grain{
+  position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(rgba(36,31,33,.12) 1px,transparent 1px);
+  background-size:5px 5px;
+  border-radius:120px 120px 18px 18px;
+}
+.hero-art .art-tag{
+  position:absolute;background:var(--card);
+  border:1px solid var(--line);border-radius:12px;
+  box-shadow:var(--shadow);font-size:var(--fs-xs);color:var(--ink-2);
+  padding:8px 12px;display:flex;align-items:center;gap:8px;
+}
+.hero-art .art-tag b{color:var(--main-dark);font-size:13px;}
+.hero-art .tag-1{left:-2%;bottom:22%;}
+.hero-art .tag-2{right:0;bottom:6%;}
+.hero-art .tag-1 i,.hero-art .tag-2 i{
+  width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;flex-shrink:0;
+}
+
+/* ---------- 布局：左栏单栏 + 右侧栏 ---------- */
+.layout{
+  max-width:1240px;margin:0 auto;padding:var(--sp-4) var(--sp-3) var(--sp-5);
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--sp-4);
+  align-items:start;
+}
+.main-col{min-width:0;}
+.side-col{min-width:0;position:sticky;top:96px;display:flex;flex-direction:column;gap:var(--sp-3);}
+
+section.block{
+  margin-bottom:var(--sp-5);
+  scroll-margin-top:96px;
+}
+.block-head{
+  display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;
+  margin-bottom:var(--sp-2);
+  padding-bottom:10px;border-bottom:1px solid var(--line);
+}
+.block-head h2{position:relative;padding-left:14px;}
+.block-head h2::before{
+  content:"";position:absolute;left:0;top:.18em;bottom:.18em;width:5px;border-radius:3px;
+  background:linear-gradient(180deg,var(--main),var(--main-dark));
+}
+.block-head .sub{font-size:var(--fs-s);color:var(--ink-3);margin-left:auto;}
+.block-intro{font-size:var(--fs-s);color:var(--ink-3);margin-bottom:var(--sp-2);max-width:70ch;}
+
+/* 通用卡片 */
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);overflow:hidden;
+  transition:transform .2s,box-shadow .2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);}
+.card-body{padding:var(--sp-3);}
+.card h3{font-size:var(--fs-l);margin-bottom:6px;}
+.card p{font-size:var(--fs-s);}
+.meta{font-size:var(--fs-xs);color:var(--ink-3);letter-spacing:.02em;}
+.tag{
+  display:inline-block;font-size:var(--fs-xs);padding:2px 9px;border-radius:20px;
+  background:var(--main-soft);color:var(--main-dark);margin:2px 4px 2px 0;font-weight:500;
+  transition:background .18s;
+}
+a.tag:hover{background:#f1d2cd;text-decoration:none;}
+.tag.green{background:var(--accent-soft);color:var(--accent);}
+
+/* 概览：四风格对照面板 */
+.style-compare{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+}
+.style-item{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 16px;display:flex;flex-direction:column;gap:8px;
+  transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.style-item:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#e3c6c1;}
+.style-item .num{
+  font-family:var(--serif);font-size:13px;font-weight:700;color:var(--main);
+  letter-spacing:.1em;
+}
+.style-item h3{font-size:17px;margin:0;}
+.style-item dl{font-size:var(--fs-xs);color:var(--ink-2);display:grid;gap:4px;margin-top:2px;}
+.style-item dl div{display:flex;gap:6px;}
+.style-item dt{color:var(--ink-3);flex-shrink:0;width:42px;}
+.style-item dd{color:var(--ink-2);}
+
+/* 精选推荐：非对称网格 */
+.feature-grid{
+  display:grid;grid-template-columns:1.35fr 1fr;gap:var(--sp-2);
+}
+.feature-main .card-body{padding:var(--sp-3);}
+.feature-main img{width:100%;height:230px;object-fit:cover;}
+.feature-side{display:flex;flex-direction:column;gap:var(--sp-2);}
+.mini-card{
+  display:flex;gap:12px;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius-s);padding:12px;align-items:flex-start;
+  transition:transform .18s,box-shadow .18s;
+}
+.mini-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.mini-card img{
+  width:72px;height:72px;object-fit:cover;border-radius:8px;flex-shrink:0;
+}
+.mini-card b{display:block;font-size:var(--fs-s);color:var(--ink);margin-bottom:3px;line-height:1.4;}
+.mini-card span{font-size:var(--fs-xs);color:var(--ink-3);}
+
+/* 最新更新：紧凑列表 */
+.update-list{list-style:none;padding:0;border-top:1px solid var(--line);}
+.update-list li{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;
+  padding:12px 4px;border-bottom:1px solid var(--line);
+  transition:background .18s;
+}
+.update-list li:hover{background:#fbf4f2;}
+.update-list time{
+  font-size:var(--fs-xs);color:var(--main-dark);font-weight:600;flex-shrink:0;
+  font-variant-numeric:tabular-nums;min-width:82px;
+}
+.update-list .ut{font-size:var(--fs-s);color:var(--ink);flex:1;min-width:180px;}
+.update-list .ut a{color:var(--ink);}
+.update-list .ut a:hover{color:var(--main-dark);}
+.update-list .um{font-size:var(--fs-xs);color:var(--ink-3);}
+
+/* 分类入口：标签索引 */
+.cat-index{display:flex;flex-wrap:wrap;gap:10px;}
+.cat-index a{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:9px 16px;font-size:var(--fs-s);color:var(--ink-2);font-weight:500;
+  transition:all .18s;
+}
+.cat-index a:hover{
+  background:var(--main);color:#fff;border-color:var(--main-dark);
+  text-decoration:none;transform:translateY(-2px);
+}
+.cat-index a small{font-size:11px;opacity:.6;}
+
+/* 深度解析：分栏正文 */
+.depth{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:var(--sp-3) var(--sp-3) var(--sp-4);box-shadow:var(--shadow);
+}
+.depth .lede{font-size:17px;color:var(--ink);border-left:3px solid var(--main);padding-left:16px;margin-bottom:var(--sp-3);}
+.depth h3{
+  margin:var(--sp-3) 0 10px;font-size:var(--fs-l);color:var(--ink);
+  display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+}
+.depth h3 .h3-tag{
+  font-size:var(--fs-xs);font-weight:600;color:var(--accent);
+  background:var(--accent-soft);padding:2px 9px;border-radius:20px;letter-spacing:.03em;
+}
+.depth p{margin-bottom:12px;font-size:15.5px;}
+.depth strong{color:var(--ink);font-weight:600;}
+.depth .evidence{
+  background:#fbf6f4;border:1px dashed #e2c4c0;border-radius:var(--radius-s);
+  padding:12px 16px;margin:12px 0;font-size:var(--fs-s);color:var(--ink-2);
+}
+.depth .evidence b{color:var(--main-dark);}
+.depth .pull{
+  margin:var(--sp-3) 0;padding:18px 22px;border-radius:var(--radius-s);
+  background:linear-gradient(120deg,#f7e8e6,#fdf3ef);
+  font-family:var(--serif);font-size:18px;color:var(--main-dark);line-height:1.65;
+  border-left:4px solid var(--main);
+}
+.check-table{
+  width:100%;border-collapse:collapse;font-size:var(--fs-s);margin:14px 0;
+}
+.check-table th,.check-table td{
+  border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;
+}
+.check-table th{background:#faf1ef;color:var(--main-dark);font-weight:600;white-space:nowrap;}
+.check-table td{color:var(--ink-2);}
+.check-table tr:nth-child(even) td{background:#fdfbfa;}
+
+/* 体验指南：编号步骤 */
+.steps{list-style:none;padding:0;counter-reset:step;display:grid;gap:12px;}
+.steps li{
+  counter-increment:step;position:relative;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:16px 18px 16px 66px;
+}
+.steps li::before{
+  content:counter(step,decimal-leading-zero);
+  position:absolute;left:16px;top:16px;
+  width:36px;height:36px;border-radius:10px;
+  background:var(--main-soft);color:var(--main-dark);
+  display:grid;place-items:center;font-weight:800;font-family:var(--serif);font-size:15px;
+}
+.steps li b{display:block;font-size:var(--fs-s);color:var(--ink);margin-bottom:3px;}
+.steps li p{font-size:var(--fs-s);}
+
+/* 引语卡 / 创作者证言 */
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-2);}
+.quote-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 22px;position:relative;
+}
+.quote-card::before{
+  content:"\201C";font-family:var(--serif);font-size:52px;line-height:1;
+  color:#e9c5bf;position:absolute;top:6px;right:18px;
+}
+.quote-card blockquote{font-size:var(--fs-s);color:var(--ink-2);margin-bottom:12px;}
+.quote-card cite{font-style:normal;font-size:var(--fs-xs);color:var(--ink-3);display:flex;align-items:center;gap:8px;}
+.quote-card cite i{
+  width:24px;height:24px;border-radius:50%;display:inline-block;flex-shrink:0;
+  background:linear-gradient(135deg,#cfa49a,#8e5b52);
+}
+
+/* FAQ */
+.faq-list{display:grid;gap:10px;}
+details.faq{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-s);
+  overflow:hidden;
+}
+details.faq[open]{border-color:#e0bfba;box-shadow:var(--shadow);}
+details.faq summary{
+  cursor:pointer;padding:14px 18px;font-size:var(--fs-s);font-weight:600;color:var(--ink);
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{
+  content:"+";font-size:20px;color:var(--main);font-weight:400;flex-shrink:0;
+  transition:transform .2s;
+}
+details.faq[open] summary::after{content:"−";}
+details.faq .faq-a{
+  padding:0 18px 16px;font-size:var(--fs-s);color:var(--ink-2);
+  border-top:1px dashed var(--line);padding-top:12px;margin:0 0 0;
+}
+
+/* 用户评论 */
+.comments{display:grid;gap:12px;}
+.comment{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:14px 18px;
+}
+.comment header{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.comment .avatar{
+  width:30px;height:30px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,#e7c9c1,#cfa49a);
+  display:grid;place-items:center;font-size:12px;color:#fff;font-weight:700;
+}
+.comment .avatar.g2{background:linear-gradient(135deg,#9fbfb7,#5f8a82);}
+.comment .avatar.g3{background:linear-gradient(135deg,#d8b98a,#a97e44);}
+.comment .avatar.g4{background:linear-gradient(135deg,#a9b3cf,#60719c);}
+.comment .who{font-size:var(--fs-s);font-weight:600;color:var(--ink);}
+.comment .when{font-size:var(--fs-xs);color:var(--ink-3);margin-left:auto;}
+.comment p{font-size:var(--fs-s);color:var(--ink-2);}
+.comment p em{font-style:normal;background:#fbf0ec;padding:0 3px;border-radius:3px;}
+
+/* 相关资讯（双栏小卡） */
+.news-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.news-item{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:14px 16px;transition:transform .18s,box-shadow .18s;
+}
+.news-item:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.news-item time{font-size:var(--fs-xs);color:var(--main-dark);font-weight:600;}
+.news-item b{display:block;font-size:var(--fs-s);color:var(--ink);margin:3px 0;line-height:1.5;}
+.news-item p{font-size:var(--fs-xs);color:var(--ink-3);}
+
+/* 相关推荐标签 */
+.reco-wrap{display:flex;flex-wrap:wrap;gap:10px;}
+.reco-wrap a{
+  padding:8px 16px;border-radius:22px;font-size:var(--fs-s);
+  background:var(--card);border:1px solid var(--line);color:var(--ink-2);
+  transition:all .18s;
+}
+.reco-wrap a:hover{background:var(--accent);color:#fff;border-color:var(--accent);text-decoration:none;transform:translateY(-2px);}
+
+/* 榜单 */
+.rank{list-style:none;padding:0;counter-reset:rk;display:grid;gap:8px;}
+.rank li{
+  counter-increment:rk;display:flex;gap:14px;align-items:flex-start;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:13px 16px;
+}
+.rank li::before{
+  content:counter(rk);font-family:var(--serif);font-weight:800;font-size:20px;
+  color:#ddc0ba;flex-shrink:0;width:26px;text-align:center;line-height:1.5;
+}
+.rank li:nth-child(-n+3)::before{color:var(--main);}
+.rank b{font-size:var(--fs-s);color:var(--ink);display:block;}
+.rank span{font-size:var(--fs-xs);color:var(--ink-3);}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0 0 0 22px;border-left:2px solid #ecd0cc;display:grid;gap:16px;}
+.timeline li{position:relative;}
+.timeline li::before{
+  content:"";position:absolute;left:-29px;top:6px;width:12px;height:12px;
+  border-radius:50%;background:var(--card);border:3px solid var(--main);
+}
+.timeline time{font-size:var(--fs-xs);font-weight:700;color:var(--main-dark);display:block;margin-bottom:2px;}
+.timeline p{font-size:var(--fs-s);}
+
+/* 侧栏 */
+.side-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;box-shadow:var(--shadow);
+}
+.side-card h2,.side-card h3{
+  font-size:var(--fs-m);margin-bottom:12px;padding-bottom:9px;
+  border-bottom:1px solid var(--line);letter-spacing:.02em;
+}
+.side-toc{list-style:none;padding:0;display:grid;gap:2px;}
+.side-toc a{
+  display:block;font-size:var(--fs-s);color:var(--ink-2);padding:6px 10px;border-radius:7px;
+  border-left:3px solid transparent;transition:all .18s;
+}
+.side-toc a:hover{background:var(--main-soft);color:var(--main-dark);text-decoration:none;}
+.side-toc a.active{
+  background:var(--main-soft);color:var(--main-dark);border-left-color:var(--main);font-weight:600;
+}
+.side-links{list-style:none;padding:0;display:grid;gap:8px;}
+.side-links a{font-size:var(--fs-s);color:var(--ink-2);display:block;}
+.side-links a:hover{color:var(--main-dark);}
+.side-links .s-meta{font-size:var(--fs-xs);color:var(--ink-3);}
+.side-note{font-size:var(--fs-xs);color:var(--ink-3);line-height:1.7;}
+.side-note b{color:var(--main-dark);}
+
+/* 页尾 */
+.site-footer{
+  background:#2a2124;color:#cfc3c5;margin-top:var(--sp-4);
+  padding:var(--sp-4) var(--sp-3) 0;
+}
+.footer-inner{max-width:1240px;margin:0 auto;}
+.footer-top{
+  display:grid;grid-template-columns:1.2fr 2fr;gap:var(--sp-4);
+  padding-bottom:var(--sp-3);border-bottom:1px solid rgba(255,255,255,.1);
+}
+.footer-brand .brand-mark{margin-bottom:12px;}
+.footer-brand .f-name{font-size:var(--fs-l);font-weight:800;color:#fff;letter-spacing:.04em;margin-bottom:8px;}
+.footer-brand p{font-size:var(--fs-s);color:#b9abad;max-width:34ch;line-height:1.75;}
+.footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);}
+.footer-cols h2,.footer-cols h3{font-size:var(--fs-s);color:#fff;margin-bottom:10px;letter-spacing:.04em;}
+.footer-cols ul{list-style:none;padding:0;display:grid;gap:7px;}
+.footer-cols a{color:#b9abad;font-size:var(--fs-xs);}
+.footer-cols a:hover{color:#fff;}
+.footer-bottom{
+  padding:16px 0 22px;font-size:var(--fs-xs);color:#8f8285;
+  display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;
+}
+.footer-bottom .sep{opacity:.4;}
+.footer-note{font-size:var(--fs-xs);color:#8f8285;padding-bottom:12px;line-height:1.7;}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:22px;bottom:26px;z-index:70;
+  width:46px;height:46px;border-radius:50%;
+  background:var(--main);color:#fff;border:none;cursor:pointer;
+  box-shadow:0 6px 18px rgba(176,69,94,.35);
+  display:grid;place-items:center;
+  opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:opacity .22s,transform .22s,visibility .22s,background .18s;
+  font-size:18px;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0);}
+.to-top:hover{background:var(--main-dark);}
+
+/* ---------- 响应式 ---------- */
+@media(max-width:1020px){
+  .layout{grid-template-columns:1fr;}
+  .side-col{position:static;flex-direction:row;flex-wrap:wrap;}
+  .side-col .side-card{flex:1 1 260px;}
+  .style-compare{grid-template-columns:repeat(2,1fr);}
+  .hero-inner{grid-template-columns:1fr;gap:var(--sp-3);}
+  .hero-art{max-width:520px;margin:0 auto;width:100%;}
+  .footer-top{grid-template-columns:1fr;}
+  .site-nav{display:none;}
+  .site-nav.open{
+    display:block;position:absolute;left:0;right:0;top:100%;
+    background:var(--bg);border-bottom:1px solid var(--line);
+    box-shadow:0 14px 26px rgba(36,31,33,.12);
+    padding:8px var(--sp-3) 14px;
+  }
+  .site-nav.open ul{flex-direction:column;gap:2px;}
+  .nav-toggle{display:inline-flex;}
+  .header-tools .search-box input{width:96px;}
+}
+@media(max-width:760px){
+  .feature-grid{grid-template-columns:1fr;}
+  .quotes{grid-template-columns:1fr;}
+  .news-grid{grid-template-columns:1fr;}
+  .style-compare{grid-template-columns:1fr;}
+  .footer-cols{grid-template-columns:1fr 1fr;}
+  .hero-inner{padding-top:var(--sp-4);}
+  .depth{padding:var(--sp-2) var(--sp-2) var(--sp-3);}
+  .update-list .ut{min-width:0;flex-basis:100%;}
+}
+@media(max-width:480px){
+  .header-inner{padding:9px 12px;gap:10px;flex-wrap:wrap;}
+  .brand-text{font-size:17px;}
+  .header-tools{width:100%;justify-content:space-between;}
+  .search-box{flex:1;}
+  .search-box input{width:100%;min-width:60px;}
+  .announce-inner{padding:7px 12px;font-size:11.5px;}
+  .site-header{top:32px;}
+  .layout{padding:var(--sp-3) 12px var(--sp-4);}
+  .to-top{right:14px;bottom:18px;width:42px;height:42px;}
+  .footer-cols{grid-template-columns:1fr;}
+  .hero h1{font-size:34px;}
+  .steps li{padding:14px 14px 14px 58px;}
+  .steps li::before{left:12px;width:32px;height:32px;font-size:13px;}
+  .check-table{display:block;overflow-x:auto;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce">
+  <div class="announce-inner">
+    <span><b>11月7日更新</b>　收录秋季外景专题 12 组，附拍摄参数与选片笔记</span>
+    <a href="/#latest">查看最新更新</a>
+    <span>｜</span>
+    <a href="/#depth">深度解析：阴天补光与胶片肤色</a>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="/#top" aria-label="美女写真 首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="8.6" r="4.2" fill="#f7e8e6"/>
+          <path d="M4.6 21c.6-4.6 3.7-7 7.4-7s6.8 2.4 7.4 7z" fill="#f7e8e6"/>
+          <circle cx="18.6" cy="5.2" r="1.6" fill="#2f5d62"/>
+        </svg>
+      </span>
+      <span class="brand-text">美女写真</span>
+    </a>
+
+    <nav class="site-nav" id="siteNav" aria-label="主题导航">
+      <ul>
+        <li><a href="/#overview">风格概览</a></li>
+        <li><a href="/#featured">精选作品</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#cats">分类入口</a></li>
+        <li><a href="/#depth">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#rank">作品榜单</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-tools">
+      <div class="search-box" role="search">
+        <label for="siteSearch" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">站内搜索</label>
+        <input id="siteSearch" type="search" placeholder="搜风格 / 摄影师…" autocomplete="off">
+        <button type="button" id="searchBtn">查找</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">
+        <span class="bars" aria-hidden="true"></span>菜单
+      </button>
+    </div>
+  </div>
+  <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite">
+    <div class="fb-inner" id="searchFeedbackInner"></div>
+  </div>
+</header>
+
+<!-- 主题首屏 -->
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="hero-eyebrow"><i aria-hidden="true"></i>人像图鉴 · 2026 秋冬季</span>
+      <h1 id="heroTitle">美女写真<em>风格图鉴</em></h1>
+      <p class="hero-lead">
+        棚拍硬光、城市外景、胶片颗粒、生成式人像四类路径，逐组标注灯具功率、镜头焦段、胶卷型号与后期流程。每张样片对应可复查的 EXIF 与拍摄日志，<strong>先看参数再谈感觉</strong>。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#featured">看本周精选 6 组</a>
+        <a class="btn btn-ghost" href="/#guide">按步骤选片与拍摄</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>186</b><span>组可查参数样片</span></div>
+        <div><b>4</b><span>类拍摄路径</span></div>
+        <div><b>23</b><span>位摄影师访谈</span></div>
+        <div><b>11月7日</b><span>最近一次入库</span></div>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="portrait-frame"></div>
+      <div class="grain"></div>
+      <div class="light-leak"></div>
+      <div class="art-tag tag-1"><i></i><span>胶片样片 · <b>Portra 400</b></span></div>
+      <div class="art-tag tag-2"><i></i><span>外景主光 · <b>阴天 5200K</b></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 主体布局 -->
+<div class="layout">
+
+  <main class="main-col">
+
+    <!-- 1 领域概览 -->
+    <section class="block" id="overview">
+      <div class="block-head">
+        <h2>四类人像写真路径对照</h2>
+        <span class="sub">2026 年 11 月样片统计口径</span>
+      </div>
+      <p class="block-intro">同一张脸在不同光源与介质下会被拍成完全不同的两个人。下面四类路径按主光设备、常用焦段、后期工作量与交付周期拆开，便于先定方向再约拍。</p>
+      <div class="style-compare">
+        <article class="style-item">
+          <span class="num">01 / 棚拍硬光</span>
+          <h3>棚拍人像写真</h3>
+          <dl>
+            <div><dt>主光</dt><dd>90×120cm 八角柔光箱</dd></div>
+            <div><dt>焦段</dt><dd>85mm f/1.8–f/4</dd></div>
+            <div><dt>后期</dt><dd>6–9 小时</dd></div>
+            <div><dt>周期</dt><dd>3–5 天</dd></div>
+          </dl>
+        </article>
+        <article class="style-item">
+          <span class="num">02 / 城市外景</span>
+          <h3>城市外景写真</h3>
+          <dl>
+            <div><dt>主光</dt><dd>自然光 + 反光板</dd></div>
+            <div><dt>焦段</dt><dd>35mm / 50mm</dd></div>
+            <div><dt>后期</dt><dd>3–5 小时</dd></div>
+            <div><dt>周期</dt><dd>2–3 天</dd></div>
+          </dl>
+        </article>
+        <article class="style-item">
+          <span class="num">03 / 胶片颗粒</span>
+          <h3>胶片写真</h3>
+          <dl>
+            <div><dt>主光</dt><dd>窗光 + 55° 斜射</dd></div>
+            <div><dt>胶卷</dt><dd>Portra 400 / Ektar 100</dd></div>
+            <div><dt>后期</dt><dd>扫底校色 2 小时</dd></div>
+            <div><dt>周期</dt><dd>5–8 天</dd></div>
+          </dl>
+        </article>
+        <article class="style-item">
+          <span class="num">04 / 生成式</span>
+          <h3>AI 人像写真</h3>
+          <dl>
+            <div><dt>主光</dt><dd>提示词控制</dd></div>
+            <div><dt>参数</dt><dd>参考图权重 0.55</dd></div>
+            <div><dt>后期</dt><dd>修手与眼神光 4 小时</dd></div>
+            <div><dt>周期</dt><dd>1–2 天</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="block" id="featured">
+      <div class="block-head">
+        <h2>本周精选作品推荐</h2>
+        <span class="sub">11 月 3 日—11 月 7 日入库</span>
+      </div>
+      <p class="block-intro">选片标准有两条：光源可复述，姿态不过度依赖液化。下列六组样片均在拍摄日志中写清灯具位置与焦段，可直接照搬。</p>
+      <div class="feature-grid">
+        <article class="card feature-main">
+          <img src="https://picsum.photos/seed/portrait-studio-85/760/460" width="760" height="460" loading="lazy" alt="棚拍中景样片：八角箱左前45度，灰背景纸，模特侧身回望">
+          <div class="card-body">
+            <a class="tag" href="/#cats">棚拍人像</a><a class="tag green" href="/#cats">灰背景</a>
+            <h3>灰背景侧回望：一盏主灯压出肩线</h3>
+            <p>摄影师陈砚，11 月 5 日拍摄。主灯 90×120 八角箱放在模特左前 45 度、高眼位 20cm，功率 1/8；右侧 1.2m 白反补下颌光。85mm f/2.8，ISO 100，1/160s。面部高光落在鼻梁与颧骨之间，阴影一侧仍有细节，是本周最适合新手复刻的一张。</p>
+            <p class="meta">拍摄地 上海静安某影棚 · 交付 4 天 · 成片 36 张</p>
+          </div>
+        </article>
+        <div class="feature-side">
+          <a class="mini-card" href="/#latest">
+            <img src="https://picsum.photos/seed/outdoor-autumn-35/160/160" width="160" height="160" loading="lazy" alt="秋季外景样片：梧桐树下35mm环境人像">
+            <div><b>梧桐树下的 35mm 环境人像</b><span>11月6日 · 阴天白平衡 5200K</span></div>
+          </a>
+          <a class="mini-card" href="/#latest">
+            <img src="https://picsum.photos/seed/film-portra-window/160/160" width="160" height="160" loading="lazy" alt="胶片窗光样片：Portra 400，侧逆光轮廓">
+            <div><b>窗光 Portra 400 欠曝一档</b><span>11月4日 · 扫描 4000dpi</span></div>
+          </a>
+          <a class="mini-card" href="/#depth">
+            <img src="https://picsum.photos/seed/ai-prompt-portrait/160/160" width="160" height="160" loading="lazy" alt="生成式人像样片：柔焦与手部修复示意">
+            <div><b>生成式人像的手部修复流程</b><span>11月2日 · 权重 0.55</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="block" id="latest">
+      <div class="block-head">
+        <h2>最新更新与入库日志</h2>
+        <span class="sub">按日期倒序，含删改记录</span>
+      </div>
+      <ul class="update-list">
+        <li>
+          <time datetime="2026-11-07">11月7日</time>
+          <span class="ut"><a href="/#featured">秋季外景专题第 3 批：12 组梧桐与银杏背景样片入库</a></span>
+          <span class="um">新增 · 附补光位置示意</span>
+        </li>
+        <li>
+          <time datetime="2026-11-06">11月6日</time>
+          <span class="ut"><a href="/#depth">《阴天外景白平衡与肤色》增补 Ektar 100 对照段落</a></span>
+          <span class="um">修订 · 更正 5200K 与 5600K 差值</span>
+        </li>
+        <li>
+          <time datetime="2026-11-05">11月5日</time>
+          <span class="ut"><a href="/#rank">灰背景棚拍样片复评，榜单第 7 位换入陈砚《侧回望》</a></span>
+          <span class="um">榜单 · 评分依据 5 项</span>
+        </li>
+        <li>
+          <time datetime="2026-11-04">11月4日</time>
+          <span class="ut"><a href="/#comments">用户评论板块上线，首批 18 条含具体条目指向</a></span>
+          <span class="um">互动 · 开放投稿</span>
+        </li>
+        <li>
+          <time datetime="2026-11-02">11月2日</time>
+          <span class="ut"><a href="/#guide">选片流程从 5 步精简为 4 步，删去重复检查项</a></span>
+          <span class="um">指南 · 版本 v2.1</span>
+        </li>
+        <li>
+          <time datetime="2026-10-31">10月31日</time>
+          <span class="ut"><a href="/#depth">生成式人像授权争议梳理：3 个平台条款差异表</a></span>
+          <span class="um">深度 · 含事实与推测分层</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="block" id="cats">
+      <div class="block-head">
+        <h2>按拍摄场景与介质分类</h2>
+        <span class="sub">频道 10 个，显示样片数</span>
+      </div>
+      <div class="cat-index">
+        <a href="/#overview">棚拍人像写真 <small>52</small></a>
+        <a href="/#overview">城市外景写真 <small>41</small></a>
+        <a href="/#overview">胶片人像写真 <small>29</small></a>
+        <a href="/#overview">AI 人像写真 <small>24</small></a>
+        <a href="/#overview">黑白人像肖像 <small>17</small></a>
+        <a href="/#featured">雨天窗光写真 <small>9</small></a>
+        <a href="/#featured">逆光轮廓写真 <small>14</small></a>
+        <a href="/#latest">秋冬毛衣人像 <small>21</small></a>
+        <a href="/#latest">旗袍与东方人像 <small>11</small></a>
+        <a href="/#latest">通勤职业人像 <small>8</small></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="block" id="depth">
+      <div class="block-head">
+        <h2>深度解析：阴天外景为什么总拍成灰脸</h2>
+        <span class="sub">可核对的结构化判断</span>
+      </div>
+      <div class="depth">
+        <p class="lede">判断先给：阴天不是不能拍人像，问题是自动白平衡把 5200K 的天空当成了 6500K 的中性灰，机内再补一档曝光，皮肤就被拉成一层薄灰。下面把这条结论拆成时间线、参数对比与说法差异三块，逐条可查。</p>
+
+        <h3><span class="h3-tag">案例时间线</span>11 月 2 日外景组从灰到透的 40 分钟</h3>
+        <p>11 月 2 日 14 时 07 分，摄影师林照在杭州满觉陇拍第一组。相机为佳能 EOS R6，白平衡自动，结果下巴与颈侧反光偏青，直方图右侧无峰值。14 时 19 分，他改手动白平衡 5200K，加 0.3EV 曝光补偿，让模特退到桂花树荫边缘，背景亮部落在 210 灰阶附近。14 时 47 分补拍了同一姿态，下颌的青色褪去，颧骨高光与树荫暗部差约 2.3 档。两份原图都在拍摄日志里留了编号，可对照。</p>
+        <div class="evidence">
+          <b>可核对项：</b>日志编号 LZ-1102-03 与 LZ-1102-11；前者自动白平衡，后者手动 5200K；同机位同焦段 35mm，仅曝光补偿差 0.3EV。若认为差异主要来自云层移动，可查当日气象记录 14 时云量 9 成。
+        </div>
+
+        <h3><span class="h3-tag">参数对比</span>数码压灰与胶片肩部不是一回事</h3>
+        <p>同为阴天，数码机的高光恢复空间约 1.5 档，再往上拉会出现灰雾；Portra 400 在欠曝一档后推回，高光仍能保住层次，颗粒变为团状。11 月 4 日周岚那组窗光用 Portra 400，测得面部中灰 118、发梢高光 236，两点之间过渡平滑；同日数码备份组发梢已触 255，修图需单独压暗。</p>
+        <table class="check-table">
+          <thead>
+            <tr><th>检查项</th><th>数码自动白平衡组</th><th>手动 5200K 组</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>面部中灰</td><td>132（偏亮）</td><td>118</td></tr>
+            <tr><td>发梢高光</td><td>255（有断层）</td><td>236</td></tr>
+            <tr><td>颈侧青色偏移</td><td>约 -6 洋红</td><td>-1 洋红</td></tr>
+            <tr><td>后期耗时</td><td>4 小时</td><td>1.5 小时</td></tr>
+          </tbody>
+        </table>
+
+        <h3><span class="h3-tag">说法差异</span>“阴天要用大光圈”这条建议值得怀疑</h3>
+        <p>不少教程把阴天与大光圈绑在一起。按 10 月 28 日到 11 月 5 日的六组样片看，f/1.4 到 f/1.8 在阴天反而放大了前景的灰雾，因为散景里的天空亮度高于人脸，视觉重心被拉走。改用 f/2.8 到 f/4，把背景压成有层次的深绿或砖红，脸才立得住。摄影师许南在 11 月 3 日的访谈里说得直白：阴天的敌人是背景太亮，不是景深太浅。</p>
+        <div class="pull">“灰不是天气给的，是白平衡和背景亮度一起给的。”——11 月 3 日许南访谈原话</div>
+
+        <h3><span class="h3-tag">规则前后变化</span>生成式人像的授权条款在收紧</h3>
+        <p>10 月 31 日梳理三个平台条款时，A 平台仍默认商用，B 平台改为“参考图须有授权”，C 平台把肖像相似度列入人工审核。11 月 5 日某品牌海报争议中，争议点正是参考图未经授权，平台条款并未覆盖这一层。<strong>已确认的事实</strong>是海报使用了生成图；<strong>品牌回应</strong>称素材由外包提供；<strong>转述</strong>是外包方称已获口头同意；<strong>推测</strong>是合同缺少 indemnity 条款。四种信息分层，读者可据此判断风险落在哪一方。</p>
+      </div>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="block" id="guide">
+      <div class="block-head">
+        <h2>从约拍到收片的操作步骤</h2>
+        <span class="sub">4 步，按顺序执行</span>
+      </div>
+      <ol class="steps">
+        <li>
+          <b>先定光源，再定风格</b>
+          <p>棚拍问清主灯尺寸与位置，外景问清拍摄时段与朝向。11 月 5 日陈砚那组之所以能复刻，是因为日志写了八角箱 90×120cm、左前 45 度、高 20cm，缺一项都拍不出同样的肩线。</p>
+        </li>
+        <li>
+          <b>拍摄当天记录 EXIF 与补光</b>
+          <p>手机拍一张现场灯位图，记下焦段、光圈、快门、ISO 和白平衡。阴天外景尤其要记白平衡数值，否则回去修图只能靠猜。</p>
+        </li>
+        <li>
+          <b>选片用三遍法，别一遍定生死</b>
+          <p>第一遍只看眼睛是否睁开、视线是否对焦；第二遍看手部与肩线有没有别扭；第三遍才比构图与光比。周岚 11 月 4 日那组 120 张初选，三遍后剩 23 张，废片率约 81%。</p>
+        </li>
+        <li>
+          <b>收片核对交付清单</b>
+          <p>确认精修张数、是否含原片、授权范围与使用期限。生成式人像还要写明参考图来源与商用范围，避免复刻 11 月 5 日的授权争议。</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="block" id="faq">
+      <div class="block-head">
+        <h2>拍摄与选片常见问题</h2>
+        <span class="sub">按提问频率排序</span>
+      </div>
+      <div class="faq-list">
+        <details class="faq" open>
+          <summary>外景写真遇到阴天怎么拍才不会灰蒙蒙？</summary>
+          <div class="faq-a">阴天属于大柔光箱，反差低但色温偏冷。把白平衡手动设到 5200K 左右并加 0.3EV 曝光补偿，再让人物靠近深色墙面或树荫边缘，皮肤的高光层次就会回来。11 月 2 日那组外景样片用了反光板补下颌光，成片没有后期压灰。</div>
+        </details>
+        <details class="faq">
+          <summary>棚拍写真的柔光箱尺寸怎么选？</summary>
+          <div class="faq-a">柔光箱越大，过渡越缓。拍半身常用 90×120cm 八角箱，放在人物斜前 45 度、高于眼睛 20cm 的位置；拍全身若用同样尺寸，脚部会掉光，改用 120×180cm 的条形箱加地灯。样片 EXIF 显示主灯功率 1/8，背景灯 1/32。</div>
+        </details>
+        <details class="faq">
+          <summary>胶片写真和数码转胶片调色差别在哪？</summary>
+          <div class="faq-a">差别在颗粒形态和高光肩部。Portra 400 在欠曝一档再推回时，颗粒呈团状且高光不死白；数码转胶片调色颗粒是均匀噪点，高光仍会触及 255。判断时看头发高光边缘有没有断层。</div>
+        </details>
+        <details class="faq">
+          <summary>AI 生成的人像写真能用于商业海报吗？</summary>
+          <div class="faq-a">取决于平台授权条款和人物肖像来源。多数生成平台默认授予商用权，但若参考图含真人肖像，仍需额外授权。11 月 5 日某品牌海报争议就是参考图未授权，平台条款并未覆盖。合同里应写明生成图的权属与 indemnity。</div>
+        </details>
+        <details class="faq">
+          <summary>写真选片时先看构图还是先看表情？</summary>
+          <div class="faq-a">先筛表情，再排构图。表情有瑕疵的底片几乎无法修，构图可裁切二次构图。选片师常用三遍法：第一遍只看眼睛，第二遍看手部与姿态，第三遍才比构图与光比。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="block" id="comments">
+      <div class="block-head">
+        <h2>用户评论与拍摄反馈</h2>
+        <span class="sub">首批 18 条，选取 6 条</span>
+      </div>
+      <div class="comments">
+        <article class="comment">
+          <header><span class="avatar">阿</span><span class="who">阿雉</span><span class="when">11月7日 09:12</span></header>
+          <p>照着陈砚《灰背景侧回望》那组参数拍了一次，主灯 1/8 对我家小棚太亮，鼻尖直接过曝。降到 1/16、反光板往前挪 30cm 才正常。参数能抄，距离得自己试。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar g2">林</span><span class="who">林间雨</span><span class="when">11月6日 20:40</span></header>
+          <p>阴天那篇把 5200K 说得很对，可模特穿白毛衣时整体还是发灰。我加了一块黑旗挡侧后方天空，立刻不飘了。文章没提黑旗，补一条。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar g3">周</span><span class="who">周岚的胶卷盒</span><span class="when">11月5日 14:03</span></header>
+          <p>11 月 4 日窗光那组我在现场。Portra 400 欠一档推回确实扛得住，但扫描时若用 4000dpi 以上，颗粒会被锐化得发硬，反而失真。建议扫 3000dpi 再柔化。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar g4">K</span><span class="who">Kirin_9</span><span class="when">11月5日 11:26</span></header>
+          <p>榜单第五那个逆光轮廓，模特脸几乎全黑，评语写“有意为之”。我不太买账，轮廓光再美，脸不能认不出是谁。评分标准里“面部可读性”占多少分？希望公示。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">程</span><span class="who">程小满</span><span class="when">11月4日 22:15</span></header>
+          <p>AI 人像那块说得克制，但手部修复流程太理想。我生成的图手指关节永远多一节，权重调到 0.55 也救不回来，最后还是换参考图重跑。希望多给几张失败案例对照。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar g2">老</span><span class="who">老宋拍黑白</span><span class="when">11月3日 08:47</span></header>
+          <p>黑白人像频道只有 17 组，偏少。灰阶过渡比彩色更能看出布光功底，建议把 11 月 1 日那组高调黑白也收进去，背景纸的层次很清楚。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="block" id="news">
+      <div class="block-head">
+        <h2>人像摄影相关资讯</h2>
+        <span class="sub">10 月 28 日—11 月 7 日</span>
+      </div>
+      <div class="news-grid">
+        <article class="news-item">
+          <time datetime="2026-11-07">11月7日</time>
+          <b>秋季外景专题第 3 批入库</b>
+          <p>12 组梧桐与银杏背景样片，附补光位置示意图与拍摄时段。</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2026-11-05">11月5日</time>
+          <b>某品牌生成式海报引发授权讨论</b>
+          <p>争议集中参考图来源，平台条款未覆盖真人肖像，品牌称外包提供。</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2026-11-03">11月3日</time>
+          <b>许南访谈：阴天的敌人是背景太亮</b>
+          <p>谈外景白平衡与 f/2.8 的取舍，附两组同机位对比原图。</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2026-10-30">10月30日</time>
+          <b>灰背景棚拍样片复评结果公示</b>
+          <p>评分含光源复述度、姿态自然度、面部可读性、后期克制、可复刻性五项。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="block" id="reco">
+      <div class="block-head">
+        <h2>相关推荐与延伸阅读</h2>
+        <span class="sub">按搜索词聚合</span>
+      </div>
+      <div class="reco-wrap">
+        <a href="/#depth">阴天外景白平衡</a>
+        <a href="/#featured">灰背景棚拍参数</a>
+        <a href="/#guide">写真选片三遍法</a>
+        <a href="/#overview">Portra 400 肤色表现</a>
+        <a href="/#depth">生成式人像授权</a>
+        <a href="/#guide">柔光箱尺寸选择</a>
+        <a href="/#cats">逆光轮廓人像</a>
+        <a href="/#rank">黑白人像灰阶</a>
+        <a href="/#latest">秋冬毛衣人像</a>
+        <a href="/#comments">棚拍废片率统计</a>
+      </div>
+    </section>
+
+    <!-- 11 榜单 -->
+    <section class="block" id="rank">
+      <div class="block-head">
+        <h2>本季人像写真作品榜单</h2>
+        <span class="sub">五项评分，满分 50</span>
+      </div>
+      <ol class="rank">
+        <li><div><b>《窗边白衬衫》· 周岚</b><span>46 分 · 11月4日 · 胶片窗光，发梢 236 灰阶</span></div></li>
+        <li><div><b>《灰背景侧回望》· 陈砚</b><span>44 分 · 11月5日 · 主灯 1/8，肩线干净</span></div></li>
+        <li><div><b>《梧桐 14 时》· 林照</b><span>43 分 · 11月2日 · 手动 5200K，背景层次足</span></div></li>
+        <li><div><b>《毛衣与砖墙》· 许南</b><span>41 分 · 11月3日 · f/2.8 背景压深绿</span></div></li>
+        <li><div><b>《逆光发丝》· 苏禾</b><span>38 分 · 10月31日 · 轮廓强，面部可读性偏低</span></div></li>
+        <li><div><b>《高调黑白》· 老宋</b><span>37 分 · 11月1日 · 灰阶过渡细腻</span></div></li>
+        <li><div><b>《生成式柔焦》· Kiri</b><span>35 分 · 11月2日 · 手部修复留痕</span></div></li>
+      </ol>
+    </section>
+
+    <!-- 12 创作者证言 -->
+    <section class="block" id="voices">
+      <div class="block-head">
+        <h2>创作者证言</h2>
+        <span class="sub">拍摄日志摘录</span>
+      </div>
+      <div class="quotes">
+        <article class="quote-card">
+          <blockquote>“阴天拍人像，先别急着开大光圈。把背景压暗一档，脸自己就出来了。我 11 月 2 日那组换了三次站位，最后一张是站在树荫边缘、背后是深绿灌木。”</blockquote>
+          <cite><i aria-hidden="true"></i>林照 · 外景摄影师，11月2日</cite>
+        </article>
+        <article class="quote-card">
+          <blockquote>“胶片不怕欠曝，怕的是扫描时被锐化。3000dpi 扫出来的颗粒是圆的，4000dpi 以上会变成硬点，修图师一看就知道。”</blockquote>
+          <cite><i aria-hidden="true"></i>周岚 · 胶片人像，11月4日</cite>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右侧栏 -->
+  <aside class="side-col" aria-label="侧栏导航与推荐">
+
+    <div class="side-card">
+      <h2>本页栏目</h2>
+      <ul class="side-toc" id="sideToc">
+        <li><a href="/#overview">风格概览</a></li>
+        <li><a href="/#featured">精选作品</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#cats">分类入口</a></li>
+        <li><a href="/#depth">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#rank">作品榜单</a></li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <h3>近 7 日高热条目</h3>
+      <ul class="side-links">
+        <li><a href="/#depth">阴天白平衡 5200K 实测</a><span class="s-meta">11月2日 · 阅读 1.2 万</span></li>
+        <li><a href="/#featured">灰背景侧回望参数</a><span class="s-meta">11月5日 · 阅读 8,640</span></li>
+        <li><a href="/#guide">选片三遍法拆解</a><span class="s-meta">11月2日 · 阅读 7,110</span></li>
+        <li><a href="/#depth">生成式人像授权分层</a><span class="s-meta">10月31日 · 阅读 6,305</span></li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <h3>数据说明</h3>
+      <p class="side-note">样片参数来自拍摄日志与 EXIF 摘录，评分为编辑按五项标准打分，非商业排名。<b>更新时间 11 月 7 日</b>，对应正文“秋季外景专题第 3 批入库”。</p>
+    </div>
+
+  </aside>
+</div>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="8.6" r="4.2" fill="#f7e8e6"/>
+            <path d="M4.6 21c.6-4.6 3.7-7 7.4-7s6.8 2.4 7.4 7z" fill="#f7e8e6"/>
+            <circle cx="18.6" cy="5.2" r="1.6" fill="#2f5d62"/>
+          </svg>
+        </span>
+        <div class="f-name">美女写真</div>
+        <p>用人像作品讲清光源、参数与判断边界，样片附可复查的拍摄记录。</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h3>风格频道</h3>
+          <ul>
+            <li><a href="/#overview">棚拍人像写真</a></li>
+            <li><a href="/#overview">城市外景写真</a></li>
+            <li><a href="/#overview">胶片人像写真</a></li>
+            <li><a href="/#overview">AI 人像写真</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>阅读栏目</h3>
+          <ul>
+            <li><a href="/#depth">深度解析</a></li>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>动态与榜单</h3>
+          <ul>
+            <li><a href="/#latest">最新更新</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#rank">作品榜单</a></li>
+            <li><a href="/#voices">创作者证言</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-note">站内样片、人物与拍摄日志均为示例内容，用于说明拍摄流程与判断方法，不代表真实委托关系。页面数据更新于 2026 年 11 月 7 日。</div>
+    <div class="footer-bottom">
+      <span>© 2026 美女写真图鉴</span>
+      <span class="sep">|</span>
+      <span>示例站点 · 非商业用途</span>
+      <span class="sep">|</span>
+      <span>更新 11 月 7 日</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var navToggle = document.getElementById('navToggle');
+  var siteNav = document.getElementById('siteNav');
+  if(navToggle && siteNav){
+    navToggle.addEventListener('click', function(){
+      var open = siteNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    siteNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        siteNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 平滑滚动偏移（吸顶预留） */
+  function headerOffset(){
+    var ann = document.querySelector('.announce');
+    var hd = document.querySelector('.site-header');
+    return (ann ? ann.offsetHeight : 0) + (hd ? hd.offsetHeight : 0) + 8;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="/#"]');
+    if(!a) return;
+    var id = a.getAttribute('href').slice(2);
+    if(!id) return;
+    var target = document.getElementById(id);
+    if(!target) return;
+    e.preventDefault();
+    var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset();
+    window.scrollTo({top: top, behavior: 'smooth'});
+    history.replaceState(null, '', '/#' + id);
+  });
+
+  /* 滚动高亮侧栏 */
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('#sideToc a'));
+  var sections = tocLinks.map(function(a){
+    return document.getElementById(a.getAttribute('href').slice(2));
+  }).filter(Boolean);
+
+  function highlight(){
+    var pos = window.pageYOffset + headerOffset() + 40;
+    var current = null;
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= pos) current = sec.id;
+    });
+    tocLinks.forEach(function(a){
+      var id = a.getAttribute('href').slice(2);
+      if(id === current){ a.classList.add('active'); }
+      else { a.classList.remove('active'); }
+    });
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  highlight();
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.pageYOffset > 480){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 本地搜索 */
+  var input = document.getElementById('siteSearch');
+  var btn = document.getElementById('searchBtn');
+  var feedback = document.getElementById('searchFeedback');
+  var fbInner = document.getElementById('searchFeedbackInner');
+
+  /* 建立索引：标题 + 段落文字 */
+  var index = [];
+  document.querySelectorAll('main h2, main h3, main .card, main .mini-card, main .update-list li, main .news-item, main .style-item, main details.faq, main .rank li, main .comment, main .cat-index a, main .reco-wrap a').forEach(function(node){
+    var text = node.textContent.replace(/\s+/g,' ').trim();
+    index.push({text: text, el: node});
+  });
+
+  function doSearch(){
+    var q = (input.value || '').trim();
+    if(!q){
+      feedback.classList.remove('show');
+      fbInner.textContent = '';
+      return;
+    }
+    var hits = index.filter(function(item){
+      return item.text.indexOf(q) !== -1;
+    });
+    feedback.classList.add('show');
+    if(hits.length === 0){
+      fbInner.innerHTML = '没有找到与 <strong>' + escapeHtml(q) + '</strong> 相关的样片或条目。可以试试“阴天”“Portra 400”“选片”或“灰背景”。';
+      return;
+    }
+    var first = hits[0].el;
+    var section = first.closest('section');
+    var sid = section ? section.id : '';
+    var label = first.querySelector('h3, b, summary') ? first.querySelector('h3, b, summary').textContent.trim() : first.textContent.trim().slice(0,24);
+    fbInner.innerHTML = '找到 <strong>' + hits.length + '</strong> 条与 <strong>' + escapeHtml(q) + '</strong> 相关的内容，首条：<a href="/#' + sid + '">' + escapeHtml(label) + '</a>';
+  }
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  if(btn && input){
+    btn.addEventListener('click', doSearch);
+    input.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+    });
+    input.addEventListener('input', function(){
+      if(!input.value.trim()){ feedback.classList.remove('show'); }
+    });
+  }
+})();
+</script>
+</body>
+                                                                  </html>
